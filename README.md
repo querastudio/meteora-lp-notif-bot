@@ -188,11 +188,14 @@ secara otomatis di server GitHub — tidak perlu install apa pun di
 komputer Anda, cukup atur lewat halaman web GitHub.
 
 **Trade-off yang perlu dipahami**: jadwal di GitHub Actions berjalan
-tiap **15 menit** (bisa diubah), bukan tiap 30-60 detik seperti kalau bot
-dijalankan terus-menerus di VPS/laptop. Untuk kebanyakan pemantauan LP ini
-cukup memadai, tapi kalau harga bergerak sangat cepat dalam hitungan
-menit, notifikasi SL/TP bisa telat sampai 15 menit. Kalau Anda butuh
-mendekati real-time, pertimbangkan VPS kecil (langkah di atas).
+tiap **5 menit** (batas minimum praktis yang direkomendasikan GitHub sendiri
+— di bawah itu jadwalnya jadi tidak reliable, bisa diubah), bukan tiap
+30-60 detik seperti kalau bot dijalankan terus-menerus di VPS/laptop atau
+hosting selalu-nyala (Railway/Render, lihat `Dockerfile` di repo ini kalau
+nanti butuh). Untuk kebanyakan pemantauan LP ini cukup memadai, tapi kalau
+harga bergerak sangat cepat dalam hitungan menit, notifikasi SL/TP bisa
+telat sampai ~5 menit (kadang lebih saat server GitHub sedang sibuk,
+jadwal cron tidak dijamin presisi).
 
 Cara mengaktifkan:
 
@@ -210,7 +213,7 @@ Cara mengaktifkan:
    status notifikasi) otomatis di-commit balik ke repo di file
    `data/state.db` supaya tidak hilang antar-run.
 
-Kalau mau ubah interval 15 menit itu, edit baris `cron:` di
+Kalau mau ubah interval 5 menit itu, edit baris `cron:` di
 `.github/workflows/monitor.yml` (format cron standar, 5 field, dalam UTC).
 
 ## Membaca Log
