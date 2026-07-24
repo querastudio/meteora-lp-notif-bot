@@ -179,6 +179,40 @@ Biarkan bot berjalan di background/VPS kecil atau laptop yang menyala.
 Untuk menjalankan sebagai service di Linux, bisa dibuatkan systemd unit
 atau dijalankan lewat `tmux`/`screen`/`pm2` (mengatur proses Python biasa).
 
+## Alternatif Tanpa VPS/Laptop Menyala: GitHub Actions
+
+Kalau Anda tidak mau/tidak bisa menyiapkan VPS atau membiarkan laptop
+menyala terus, repo ini sudah dilengkapi workflow
+`.github/workflows/monitor.yml` yang menjalankan satu siklus pemantauan
+secara otomatis di server GitHub — tidak perlu install apa pun di
+komputer Anda, cukup atur lewat halaman web GitHub.
+
+**Trade-off yang perlu dipahami**: jadwal di GitHub Actions berjalan
+tiap **15 menit** (bisa diubah), bukan tiap 30-60 detik seperti kalau bot
+dijalankan terus-menerus di VPS/laptop. Untuk kebanyakan pemantauan LP ini
+cukup memadai, tapi kalau harga bergerak sangat cepat dalam hitungan
+menit, notifikasi SL/TP bisa telat sampai 15 menit. Kalau Anda butuh
+mendekati real-time, pertimbangkan VPS kecil (langkah di atas).
+
+Cara mengaktifkan:
+
+1. Buka halaman repo Anda di GitHub, lalu ke **Settings → Secrets and
+   variables → Actions → New repository secret**.
+2. Tambahkan 3 secret berikut (nama harus persis sama, huruf besar semua):
+   - `WALLET_ADDRESS` — wallet address publik Anda
+   - `TELEGRAM_BOT_TOKEN` — token dari @BotFather
+   - `TELEGRAM_CHAT_ID` — chat ID Anda dari @userinfobot
+3. Selesai — workflow otomatis mulai jalan sesuai jadwal. Anda juga bisa
+   memicu satu kali run manual kapan saja lewat tab **Actions** di repo →
+   pilih workflow **Meteora DLMM Monitor** → tombol **Run workflow**.
+4. Hasil tiap poll bisa dilihat di tab **Actions** (klik run yang mana
+   saja → lihat log step "Run one monitoring poll"). State (peak PnL,
+   status notifikasi) otomatis di-commit balik ke repo di file
+   `data/state.db` supaya tidak hilang antar-run.
+
+Kalau mau ubah interval 15 menit itu, edit baris `cron:` di
+`.github/workflows/monitor.yml` (format cron standar, 5 field, dalam UTC).
+
 ## Membaca Log
 
 - `logs/bot.log` — log operasional (error, info start/stop, hasil kirim notif).

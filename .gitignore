@@ -15,9 +15,8 @@ data/*
 logs/*
 !logs/.gitkeep
 
-# node reader deps
+# node reader deps (lockfile IS committed on purpose, for reproducible CI installs)
 node_reader/node_modules/
-node_reader/package-lock.json
 
 # editor / os
 .vscode/

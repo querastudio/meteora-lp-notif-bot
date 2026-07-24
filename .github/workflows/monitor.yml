@@ -1,0 +1,99 @@
+name: Meteora DLMM Monitor
+
+# Menjalankan satu siklus pemantauan (read-only) secara berkala lewat
+# GitHub Actions, supaya tidak perlu VPS/laptop menyala terus.
+#
+# Catatan penting: jadwal cron di GitHub Actions minimal praktis ~5 menit
+# dan bisa telat beberapa menit saat beban tinggi - ini BUKAN pengganti
+# polling 30-60 detik yang sebenarnya. Untuk pemantauan mendekati real-time,
+# jalankan `python -m src.main` terus-menerus di VPS/laptop (lihat README).
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: meteora-monitor
+  cancel-in-progress: false
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: node_reader/package-lock.json
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Node dependencies (read-only DLMM reader)
+        working-directory: node_reader
+        run: npm ci
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Write config.yaml from secrets
+        env:
+          WALLET_ADDRESS: ${{ secrets.WALLET_ADDRESS }}
+          SOLANA_RPC_URL: ${{ secrets.SOLANA_RPC_URL }}
+        run: |
+          : "${SOLANA_RPC_URL:=https://api.mainnet-beta.solana.com}"
+          cat > config.yaml <<YAML
+          wallet_address: "${WALLET_ADDRESS}"
+          solana:
+            rpc_url: "${SOLANA_RPC_URL}"
+          thresholds:
+            sl_percent: -10.0
+            tp_floor_lock: 3.0
+            tp_trailing_drawdown: 5.0
+            tp_fast_threshold: 5.0
+            idle_timeout_hours: 3
+          polling:
+            interval_seconds: 45
+          price_api:
+            base_url: "https://lite-api.jup.ag/price/v3"
+          meteora:
+            app_base_url: "https://app.meteora.ag/dlmm"
+          timezone:
+            utc_offset_hours: 7
+          node_reader:
+            script_path: "node_reader/fetch_positions.js"
+          database:
+            path: "data/state.db"
+          logging:
+            log_file: "logs/bot.log"
+            journal_file: "logs/evaluations.jsonl"
+          YAML
+
+      - name: Run one monitoring poll (read-only)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python -m src.main --once
+
+      - name: Persist monitoring state back to the repo
+        run: |
+          git config user.name "meteora-monitor-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -f data/state.db logs/bot.log logs/evaluations.jsonl
+          if git diff --cached --quiet; then
+            echo "Tidak ada perubahan state untuk di-commit."
+          else
+            git commit -m "chore: update monitoring state"
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
