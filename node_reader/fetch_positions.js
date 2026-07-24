@@ -21,7 +21,7 @@
  */
 
 const { Connection, PublicKey } = require("@solana/web3.js");
-const { getMint } = require("@solana/spl-token");
+const { getMint, TOKEN_PROGRAM_ID, TOKEN_2022_PROGRAM_ID } = require("@solana/spl-token");
 // The package's CommonJS build exports the DLMM class as module.exports
 // itself (with everything else attached as static properties) - there is
 // no `.default` in this version. Handle both shapes defensively in case
@@ -38,18 +38,23 @@ function toStr(bnLike) {
 }
 
 // The exact property names for mint pubkey / decimals inside `tokenX` /
-// `tokenY` (TokenReserve) have shifted across SDK versions. Try the known
-// shapes first, then fall back to on-chain getMint() so this never
-// silently returns wrong decimals.
+// `tokenY` (TokenReserve) have shifted across SDK versions. `lbPair.tokenXMint`
+// / `tokenYMint` are the canonical mint addresses from the on-chain account,
+// so prefer those; `tokenReserve.publicKey` is the pool's reserve TOKEN
+// ACCOUNT (not the mint) in some SDK versions, so it is only used as a last
+// resort fallback, never first.
 function extractMint(tokenReserve, lbPair, side) {
   const candidates = [
-    tokenReserve && tokenReserve.publicKey,
-    tokenReserve && tokenReserve.mint,
     lbPair && lbPair[side === "x" ? "tokenXMint" : "tokenYMint"],
+    tokenReserve && tokenReserve.mint,
+    tokenReserve && tokenReserve.publicKey,
   ].filter(Boolean);
   return candidates.length ? candidates[0].toString() : null;
 }
 
+// Many newer SPL tokens (and some DLMM pools) use the Token-2022 program
+// instead of the classic SPL Token program - getMint() must be pointed at
+// the right owner program or it throws TokenInvalidAccountOwnerError.
 async function resolveDecimals(connection, tokenReserve, mintAddress, cache) {
   if (tokenReserve && typeof tokenReserve.decimal === "number") {
     return tokenReserve.decimal;
@@ -59,7 +64,14 @@ async function resolveDecimals(connection, tokenReserve, mintAddress, cache) {
   }
   if (!mintAddress) return null;
   if (cache.has(mintAddress)) return cache.get(mintAddress);
-  const info = await getMint(connection, new PublicKey(mintAddress));
+
+  const mintPubkey = new PublicKey(mintAddress);
+  let info;
+  try {
+    info = await getMint(connection, mintPubkey, "confirmed", TOKEN_PROGRAM_ID);
+  } catch (err) {
+    info = await getMint(connection, mintPubkey, "confirmed", TOKEN_2022_PROGRAM_ID);
+  }
   cache.set(mintAddress, info.decimals);
   return info.decimals;
 }

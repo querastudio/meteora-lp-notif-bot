@@ -89,7 +89,9 @@ jobs:
         run: |
           git config user.name "meteora-monitor-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add -f data/state.db logs/bot.log logs/evaluations.jsonl
+          for f in data/state.db logs/bot.log logs/evaluations.jsonl; do
+            [ -f "$f" ] && git add -f "$f"
+          done
           if git diff --cached --quiet; then
             echo "Tidak ada perubahan state untuk di-commit."
           else
