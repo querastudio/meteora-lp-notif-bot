@@ -10,6 +10,7 @@ name: Meteora DLMM Monitor
 on:
   schedule:
     - cron: "*/5 * * * *"
+    - cron: "0 1 * * *" # 01:00 UTC = 08:00 WIB - juga memicu ringkasan harian
   workflow_dispatch: {}
 
 permissions:
@@ -48,12 +49,28 @@ jobs:
 
       - name: Write config.yaml from secrets
         env:
+          # WALLET_ADDRESSES (jamak, dipisah koma) lebih disarankan untuk
+          # pantau >1 wallet. WALLET_ADDRESS (tunggal) tetap didukung untuk
+          # kompatibilitas dengan setup lama.
+          WALLET_ADDRESSES: ${{ secrets.WALLET_ADDRESSES }}
           WALLET_ADDRESS: ${{ secrets.WALLET_ADDRESS }}
           SOLANA_RPC_URL: ${{ secrets.SOLANA_RPC_URL }}
         run: |
           : "${SOLANA_RPC_URL:=https://api.mainnet-beta.solana.com}"
-          cat > config.yaml <<YAML
-          wallet_address: "${WALLET_ADDRESS}"
+          WALLET_LIST="${WALLET_ADDRESSES:-$WALLET_ADDRESS}"
+          if [ -z "$WALLET_LIST" ]; then
+            echo "GAGAL: isi secret WALLET_ADDRESSES (atau WALLET_ADDRESS) di repo Settings > Secrets and variables > Actions." >&2
+            exit 1
+          fi
+
+          echo "wallet_addresses:" > config.yaml
+          IFS=',' read -ra ADDRS <<< "$WALLET_LIST"
+          for addr in "${ADDRS[@]}"; do
+            trimmed=$(echo "$addr" | xargs)
+            [ -n "$trimmed" ] && echo "  - \"$trimmed\"" >> config.yaml
+          done
+
+          cat >> config.yaml <<YAML
           solana:
             rpc_url: "${SOLANA_RPC_URL}"
           thresholds:
@@ -77,6 +94,8 @@ jobs:
           logging:
             log_file: "logs/bot.log"
             journal_file: "logs/evaluations.jsonl"
+          monitoring:
+            failure_alert_threshold: 3
           YAML
 
       - name: Run one monitoring poll (read-only)
@@ -84,6 +103,13 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python -m src.main --once
+
+      - name: Send daily summary (hanya saat jadwal harian 08:00 WIB)
+        if: github.event.schedule == '0 1 * * *'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python -m scripts.send_daily_summary
 
       - name: Persist monitoring state back to the repo
         run: |

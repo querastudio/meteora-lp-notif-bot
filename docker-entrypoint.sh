@@ -1,13 +1,31 @@
 #!/bin/sh
 # Menulis config.yaml dari environment variables (diisi lewat dashboard web
 # Railway/Render, bukan file), lalu menjalankan bot loop terus-menerus.
+# POSIX sh saja (bukan bashism) supaya tidak bergantung pada bash ada/tidaknya
+# di base image.
 set -e
 
 : "${SOLANA_RPC_URL:=https://api.mainnet-beta.solana.com}"
 : "${POLL_INTERVAL_SECONDS:=45}"
+: "${FAILURE_ALERT_THRESHOLD:=3}"
 
-cat > /app/config.yaml <<YAML
-wallet_address: "${WALLET_ADDRESS}"
+WALLET_LIST="${WALLET_ADDRESSES:-${WALLET_ADDRESS:-}}"
+if [ -z "${WALLET_LIST}" ] || [ -z "${TELEGRAM_BOT_TOKEN}" ] || [ -z "${TELEGRAM_CHAT_ID}" ]; then
+  echo "GAGAL: environment variable WALLET_ADDRESSES (atau WALLET_ADDRESS), TELEGRAM_BOT_TOKEN, dan TELEGRAM_CHAT_ID wajib diisi di dashboard hosting Anda." >&2
+  exit 1
+fi
+
+echo "wallet_addresses:" > /app/config.yaml
+old_ifs="$IFS"
+IFS=','
+set -- ${WALLET_LIST}
+IFS="$old_ifs"
+for addr in "$@"; do
+  trimmed=$(echo "${addr}" | xargs)
+  [ -n "${trimmed}" ] && echo "  - \"${trimmed}\"" >> /app/config.yaml
+done
+
+cat >> /app/config.yaml <<YAML
 solana:
   rpc_url: "${SOLANA_RPC_URL}"
 thresholds:
@@ -31,12 +49,9 @@ database:
 logging:
   log_file: "logs/bot.log"
   journal_file: "logs/evaluations.jsonl"
+monitoring:
+  failure_alert_threshold: ${FAILURE_ALERT_THRESHOLD}
 YAML
-
-if [ -z "${WALLET_ADDRESS}" ] || [ -z "${TELEGRAM_BOT_TOKEN}" ] || [ -z "${TELEGRAM_CHAT_ID}" ]; then
-  echo "GAGAL: environment variable WALLET_ADDRESS, TELEGRAM_BOT_TOKEN, dan TELEGRAM_CHAT_ID wajib diisi di dashboard hosting Anda." >&2
-  exit 1
-fi
 
 mkdir -p /app/data /app/logs
 exec python -m src.main

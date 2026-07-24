@@ -14,7 +14,14 @@
  * completely separate project with its own limited-fund wallet.
  *
  * Usage:
- *   node fetch_positions.js <WALLET_ADDRESS> [RPC_URL]
+ *   node fetch_positions.js <WALLET_ADDRESS> [RPC_URL] [KNOWN_POSITION_PUBKEYS]
+ *
+ * KNOWN_POSITION_PUBKEYS is an optional comma-separated list of position
+ * pubkeys the caller already has state for. For any position NOT in that
+ * list (i.e. new to us), this script looks up its real on-chain creation
+ * time via getSignaturesForAddress - an extra read-only RPC call, so it's
+ * skipped for positions we've already resolved this for, keeping RPC cost
+ * roughly constant per poll instead of growing forever.
  *
  * Output: a single line of JSON (array of positions) on stdout.
  * Any human-readable diagnostics go to stderr so stdout stays parseable.
@@ -76,10 +83,30 @@ async function resolveDecimals(connection, tokenReserve, mintAddress, cache) {
   return info.decimals;
 }
 
+// Walks getSignaturesForAddress backward to find the position account's
+// earliest transaction (its creation). A single DLMM position realistically
+// has a handful to a few dozen transactions (open, add/remove, claim fee,
+// close), so one page almost always suffices; MAX_PAGES is just a hard
+// safety cap, not an expected case.
+async function resolveOpenedAt(connection, positionPubkey) {
+  const MAX_PAGES = 10;
+  let before;
+  let oldest = null;
+  for (let page = 0; page < MAX_PAGES; page++) {
+    const sigs = await connection.getSignaturesForAddress(positionPubkey, { limit: 1000, before });
+    if (sigs.length === 0) break;
+    oldest = sigs[sigs.length - 1];
+    if (sigs.length < 1000) break; // fewer than a full page = reached the start of history
+    before = oldest.signature;
+  }
+  if (!oldest || !oldest.blockTime) return null;
+  return new Date(oldest.blockTime * 1000).toISOString();
+}
+
 async function main() {
-  const [, , walletArg, rpcArg] = process.argv;
+  const [, , walletArg, rpcArg, knownArg] = process.argv;
   if (!walletArg) {
-    console.error("Usage: node fetch_positions.js <WALLET_ADDRESS> [RPC_URL]");
+    console.error("Usage: node fetch_positions.js <WALLET_ADDRESS> [RPC_URL] [KNOWN_POSITION_PUBKEYS]");
     process.exit(1);
   }
 
@@ -88,6 +115,9 @@ async function main() {
   const connection = new Connection(rpcUrl, "confirmed");
   const owner = new PublicKey(walletArg);
   const decimalsCache = new Map();
+  const knownPubkeys = new Set(
+    (knownArg || "").split(",").map((s) => s.trim()).filter(Boolean)
+  );
 
   const positionsByPool = await DLMM.getAllLbPairPositionsByUser(connection, owner);
 
@@ -102,8 +132,22 @@ async function main() {
 
     for (const pos of info.lbPairPositionsData) {
       const pd = pos.positionData;
+      const positionPubkeyStr = pos.publicKey.toString();
+
+      let openedAt = null;
+      if (!knownPubkeys.has(positionPubkeyStr)) {
+        try {
+          openedAt = await resolveOpenedAt(connection, pos.publicKey);
+        } catch (err) {
+          console.error(
+            `Gagal ambil waktu pembuatan posisi ${positionPubkeyStr}:`,
+            (err && err.message) || err
+          );
+        }
+      }
+
       output.push({
-        position_pubkey: pos.publicKey.toString(),
+        position_pubkey: positionPubkeyStr,
         lb_pair_pubkey: lbPairPubkey,
         token_x_mint: mintX,
         token_y_mint: mintY,
@@ -119,6 +163,7 @@ async function main() {
         total_claimed_fee_x: toStr(pd.totalClaimedFeeXAmount),
         total_claimed_fee_y: toStr(pd.totalClaimedFeeYAmount),
         last_updated_at: toStr(pd.lastUpdatedAt),
+        opened_at: openedAt,
       });
     }
   }

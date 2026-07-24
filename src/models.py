@@ -21,6 +21,15 @@ class RawPosition:
     total_y_amount: int
     fee_x_unclaimed: int
     fee_y_unclaimed: int
+    # Cumulative fees ever claimed out of this position (never decreases).
+    # Included in value_usd so claiming fees in the Meteora app doesn't look
+    # like a value drop - it only moves value from "unclaimed" to "claimed",
+    # both of which belong to the user.
+    total_claimed_fee_x: int
+    total_claimed_fee_y: int
+    # ISO timestamp of the position's on-chain creation (earliest tx), when
+    # resolved; None when not looked up this poll (see meteora_client).
+    opened_at: str | None
 
     @property
     def in_range(self) -> bool | None:

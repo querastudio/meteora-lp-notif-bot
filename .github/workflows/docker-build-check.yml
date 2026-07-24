@@ -16,4 +16,4 @@ jobs:
       - name: Sanity check entrypoint (tanpa kredensial asli - harus gagal dengan pesan jelas)
         run: |
           docker run --rm meteora-bot-check 2>&1 | tee run_output.txt || true
-          grep -q "WALLET_ADDRESS, TELEGRAM_BOT_TOKEN, dan TELEGRAM_CHAT_ID wajib diisi" run_output.txt
+          grep -q "TELEGRAM_BOT_TOKEN, dan TELEGRAM_CHAT_ID wajib diisi" run_output.txt

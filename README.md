@@ -28,10 +28,21 @@ ketika salah satu dari 4 kondisi terpenuhi. Semua keputusan eksekusi
    - Peak PnL turun `tp_trailing_drawdown` poin persen (default 5pp) → notifikasi *trailing stop terpicu*.
    - PnL turun kembali persis ke `tp_floor_lock` → notifikasi pengingat terakhir sebelum wilayah SL.
 3. **Fast TP (🎯)** — PnL lompat langsung ke >= `tp_fast_threshold` (default +5%) tanpa sempat melewati tahap floor-lock bertahap.
-4. **Idle Timeout (⏰)** — posisi belum pernah masuk range harga selama `idle_timeout_hours` (default 3 jam) sejak pertama terdeteksi bot.
+4. **Idle Timeout (⏰)** — posisi belum pernah masuk range harga selama `idle_timeout_hours` (default 3 jam), dihitung dari **waktu posisi benar-benar dibuat on-chain** (bukan dari kapan bot pertama kali melihatnya, kalau data itu berhasil diambil - lihat catatan di bawah).
 
 Setiap kondisi hanya dikirim **sekali per posisi** (disimpan di SQLite),
 supaya tidak spam notifikasi berulang.
+
+Selain 4 kondisi di atas, ada juga:
+
+- **Peringatan bot bermasalah (⚠️/✅)** — kalau bot gagal membaca posisi
+  beberapa kali berturut-turut (default 3x, atur lewat
+  `monitoring.failure_alert_threshold`), Anda dapat 1 notifikasi peringatan
+  supaya "tidak ada notif" tidak disalahartikan sebagai "semua aman". Begitu
+  berhasil baca lagi, dapat notifikasi pemulihan.
+- **Ringkasan harian (📊)** — tiap hari jam 08:00 WIB, dapat 1 pesan berisi
+  status semua posisi aktif (PnL, peak, status range) sekaligus, tidak
+  perlu menunggu sampai ada masalah untuk tahu kondisi posisi Anda.
 
 ## Arsitektur
 
@@ -77,6 +88,16 @@ on-chain yang gampang dibaca. Bot ini memakai pendekatan praktis:
   deposit asli, melainkan nilai saat bot mulai memantau.
 - **Rekomendasi**: jalankan bot sesegera mungkin setelah membuka posisi
   baru supaya baseline PnL akurat.
+- **Fee yang sudah diklaim ikut dihitung** sebagai bagian dari nilai posisi
+  (`total_claimed_fee_x/y`, kumulatif, tidak pernah berkurang). Jadi kalau
+  Anda klaim fee manual lewat app Meteora, PnL yang dihitung bot **tidak**
+  tiba-tiba turun - klaim fee cuma memindahkan nilai dari "belum diklaim"
+  ke "sudah diklaim", tetap dihitung sebagai milik Anda.
+- **Waktu pembuatan posisi** untuk hitungan idle-timeout diambil dari
+  transaksi on-chain paling awal di alamat posisi tersebut (butuh 1 kali
+  panggilan RPC tambahan, cuma dilakukan sekali per posisi baru - bukan
+  tiap poll). Kalau lookup ini gagal, bot pakai waktu pertama kali dia
+  melihat posisi tersebut sebagai fallback (sama seperti PnL baseline).
 
 ## Struktur Project
 
@@ -89,18 +110,20 @@ meteora-lp-notif-bot/
 │   ├── package.json
 │   └── fetch_positions.js
 ├── scripts/
-│   └── test_read_position.py   # sanity-check baca 1 wallet, tanpa kirim notif
+│   ├── test_read_position.py       # sanity-check baca wallet, tanpa kirim notif
+│   ├── send_sample_notifications.py # kirim contoh tiap jenis notif ke Telegram
+│   └── send_daily_summary.py        # kirim 1x ringkasan harian semua posisi
 ├── src/
 │   ├── config.py           # load config.yaml + .env
 │   ├── models.py           # dataclass RawPosition / ValuedPosition
 │   ├── meteora_client.py   # panggil node_reader via subprocess (READ-ONLY)
-│   ├── price_provider.py   # harga token USD (Jupiter) + resolve symbol
+│   ├── price_provider.py   # harga token USD (Jupiter + fallback DexScreener) + resolve symbol
 │   ├── conditions.py       # logika 4 kondisi notifikasi (pure function)
-│   ├── state_store.py      # persist state ke SQLite
+│   ├── state_store.py      # persist state ke SQLite (posisi + kesehatan bot)
 │   ├── notifier.py         # kirim pesan Telegram
 │   ├── logging_setup.py    # log file + journal JSONL (jurnal trading)
 │   ├── timeutil.py         # format waktu WIB
-│   └── main.py             # loop polling utama
+│   └── main.py             # loop polling utama (multi-wallet)
 ├── data/                   # data/state.db (SQLite, di-gitignore)
 └── logs/                   # bot.log + evaluations.jsonl (di-gitignore)
 ```
@@ -119,7 +142,9 @@ meteora-lp-notif-bot/
 ### 2. Siapkan wallet address publik
 
 Wallet address yang Anda pakai untuk LP di Meteora — bukan private key,
-cukup alamat publiknya (yang biasa Anda paste ke Solscan/Explorer).
+cukup alamat publiknya (yang biasa Anda paste ke Solscan/Explorer). Bot
+ini bisa pantau **lebih dari satu wallet sekaligus** kalau perlu (isi
+`wallet_addresses` sebagai daftar di `config.yaml`, lihat langkah 4).
 
 ### 3. Install dependencies
 
@@ -144,8 +169,15 @@ cp config.example.yaml config.yaml
 cp .env.example .env
 ```
 
-- Edit `config.yaml`: isi `wallet_address` dan sesuaikan threshold kalau perlu.
+- Edit `config.yaml`: isi `wallet_addresses` (daftar, bisa 1 atau lebih)
+  dan sesuaikan threshold kalau perlu.
 - Edit `.env`: isi `TELEGRAM_BOT_TOKEN` dan `TELEGRAM_CHAT_ID`.
+
+```yaml
+wallet_addresses:
+  - "WALLET_PUBLIK_PERTAMA_ANDA"
+  - "WALLET_PUBLIK_KEDUA_ANDA"   # opsional, hapus kalau cuma 1 wallet
+```
 
 RPC default memakai RPC publik Solana mainnet-beta untuk testing. Kalau
 nanti sering kena rate limit (terutama kalau polling makin cepat / posisi
@@ -202,7 +234,9 @@ Cara mengaktifkan:
 1. Buka halaman repo Anda di GitHub, lalu ke **Settings → Secrets and
    variables → Actions → New repository secret**.
 2. Tambahkan 3 secret berikut (nama harus persis sama, huruf besar semua):
-   - `WALLET_ADDRESS` — wallet address publik Anda
+   - `WALLET_ADDRESSES` — wallet address publik Anda; kalau lebih dari satu,
+     pisahkan dengan koma, contoh: `wallet1xxx,wallet2xxx`
+     (secret lama bernama `WALLET_ADDRESS`/tunggal juga masih didukung)
    - `TELEGRAM_BOT_TOKEN` — token dari @BotFather
    - `TELEGRAM_CHAT_ID` — chat ID Anda dari @userinfobot
 3. Selesai — workflow otomatis mulai jalan sesuai jadwal. Anda juga bisa
@@ -212,9 +246,23 @@ Cara mengaktifkan:
    saja → lihat log step "Run one monitoring poll"). State (peak PnL,
    status notifikasi) otomatis di-commit balik ke repo di file
    `data/state.db` supaya tidak hilang antar-run.
+5. Tiap hari jam 08:00 WIB, workflow yang sama otomatis mengirim 1 pesan
+   ringkasan status semua posisi (lihat step "Send daily summary").
 
-Kalau mau ubah interval 5 menit itu, edit baris `cron:` di
-`.github/workflows/monitor.yml` (format cron standar, 5 field, dalam UTC).
+Kalau mau ubah interval 5 menit atau jam ringkasan harian itu, edit baris
+`cron:` di `.github/workflows/monitor.yml` (format cron standar, 5 field,
+dalam UTC — ingat sesuaikan juga kondisi `if:` di step ringkasan harian
+kalau jamnya diubah).
+
+## Coba Kirim Contoh Notifikasi / Ringkasan
+
+- `python -m scripts.send_sample_notifications` — kirim 1 contoh untuk
+  tiap jenis notifikasi (SL, floor-lock, trailing stop, floor touch, fast
+  TP, idle timeout) ke Telegram Anda, pakai data rekaan (bukan wallet
+  asli), diberi label "CONTOH/TEST" supaya tidak membingungkan.
+- `python -m scripts.send_daily_summary` — kirim ringkasan status semua
+  posisi yang sedang dipantau (dari data yang sudah tersimpan), kapan saja
+  tanpa menunggu jadwal jam 08:00 WIB.
 
 ## Membaca Log
 
@@ -227,11 +275,13 @@ Kalau mau ubah interval 5 menit itu, edit baris `cron:` di
 ## Catatan Endpoint Pihak Ketiga
 
 - Harga token USD diambil dari Jupiter Price API (`price_api.base_url` di
-  `config.yaml`). Endpoint API pihak ketiga bisa berubah dari waktu ke
-  waktu (Jupiter sendiri sudah beberapa kali migrasi versi endpoint harga).
-  Kalau bot mulai gagal ambil harga, cek endpoint terbaru di
-  [dev.jup.ag](https://dev.jup.ag) dan update `price_api.base_url` — tidak
-  perlu ubah kode.
+  `config.yaml`) sebagai sumber utama, dengan **fallback otomatis ke
+  DexScreener** untuk token yang tidak ada datanya di Jupiter (umum untuk
+  token pump.fun yang sangat baru). Endpoint API pihak ketiga bisa berubah
+  dari waktu ke waktu (Jupiter sendiri sudah beberapa kali migrasi versi
+  endpoint harga). Kalau bot mulai gagal ambil harga, cek endpoint terbaru
+  di [dev.jup.ag](https://dev.jup.ag) dan update `price_api.base_url` —
+  tidak perlu ubah kode.
 - Link posisi di notifikasi disusun dari `meteora.app_base_url` +
   alamat LB pair (`https://app.meteora.ag/dlmm/<lb_pair_address>`). Buka
   link ini dengan wallet Anda terhubung di app Meteora untuk melihat posisi.

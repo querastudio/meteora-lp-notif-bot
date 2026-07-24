@@ -37,13 +37,17 @@ def _raw(in_range: bool) -> RawPosition:
         lower_bin_id=90, upper_bin_id=110,
         total_x_amount=0, total_y_amount=0,
         fee_x_unclaimed=0, fee_y_unclaimed=0,
+        total_claimed_fee_x=0, total_claimed_fee_y=0,
+        opened_at=None,
     )
 
 
 def _state(entry_time=None) -> PositionState:
+    entry_iso = (entry_time or now_utc()).isoformat()
     return PositionState(
-        position_pubkey="contoh", lb_pair_pubkey="contoh-pair", pair_label="SOL-USDC",
-        entry_value_usd=100.0, entry_time=(entry_time or now_utc()).isoformat(),
+        position_pubkey="contoh", wallet_address="ContohWallet", lb_pair_pubkey="contoh-pair",
+        pair_label="SOL-USDC", entry_value_usd=100.0, entry_time=entry_iso,
+        position_opened_at=entry_iso,
         last_seen_at=now_utc().isoformat(), last_pnl_pct=None, peak_pnl_pct=None,
         ever_in_range=False, notified_sl=False, notified_floor_lock=False,
         notified_trailing_stop=False, notified_floor_touch=False,

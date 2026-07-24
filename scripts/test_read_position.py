@@ -24,34 +24,37 @@ def main() -> None:
     config = load_config()
     logger = setup_logging(config.log_file)
 
-    print(f"Membaca posisi untuk wallet: {config.wallet_address}")
-    print(f"RPC: {config.rpc_url}\n")
+    for wallet_address in config.wallet_addresses:
+        print(f"Membaca posisi untuk wallet: {wallet_address}")
+        print(f"RPC: {config.rpc_url}\n")
 
-    try:
-        raw_positions = fetch_positions(config.wallet_address, config.rpc_url, config.node_reader_script)
-    except MeteoraReadError as exc:
-        print(f"GAGAL: {exc}")
-        sys.exit(1)
+        try:
+            raw_positions = fetch_positions(wallet_address, config.rpc_url, config.node_reader_script)
+        except MeteoraReadError as exc:
+            print(f"GAGAL: {exc}")
+            continue
 
-    if not raw_positions:
-        print("Tidak ada posisi DLMM aktif yang ditemukan untuk wallet ini.")
-        return
+        if not raw_positions:
+            print("Tidak ada posisi DLMM aktif yang ditemukan untuk wallet ini.\n")
+            continue
 
-    valued_positions = build_valued_positions(raw_positions, config, logger)
-    for v in valued_positions:
-        raw = v.raw
-        print(f"--- Posisi {raw.position_pubkey} ---")
-        print(f"  Pair            : {v.pair_label}")
-        print(f"  LB Pair         : {raw.lb_pair_pubkey}")
-        print(f"  Range bin       : {raw.lower_bin_id} .. {raw.upper_bin_id} (active: {raw.active_bin_id})")
-        print(f"  In range?       : {raw.in_range}")
-        print(f"  Total X / Y     : {raw.total_x_amount} / {raw.total_y_amount} (raw units)")
-        print(f"  Fee unclaimed   : {raw.fee_x_unclaimed} / {raw.fee_y_unclaimed} (raw units)")
-        if v.value_usd is not None:
-            print(f"  Estimasi nilai  : ${v.value_usd:,.4f}")
-        else:
-            print("  Estimasi nilai  : tidak tersedia (gagal ambil harga token)")
-        print()
+        valued_positions = build_valued_positions(raw_positions, config, logger)
+        for v in valued_positions:
+            raw = v.raw
+            print(f"--- Posisi {raw.position_pubkey} ---")
+            print(f"  Pair            : {v.pair_label}")
+            print(f"  LB Pair         : {raw.lb_pair_pubkey}")
+            print(f"  Range bin       : {raw.lower_bin_id} .. {raw.upper_bin_id} (active: {raw.active_bin_id})")
+            print(f"  In range?       : {raw.in_range}")
+            print(f"  Dibuka (on-chain): {raw.opened_at or 'belum diketahui'}")
+            print(f"  Total X / Y     : {raw.total_x_amount} / {raw.total_y_amount} (raw units)")
+            print(f"  Fee unclaimed   : {raw.fee_x_unclaimed} / {raw.fee_y_unclaimed} (raw units)")
+            print(f"  Fee sudah diklaim: {raw.total_claimed_fee_x} / {raw.total_claimed_fee_y} (raw units)")
+            if v.value_usd is not None:
+                print(f"  Estimasi nilai  : ${v.value_usd:,.4f}")
+            else:
+                print("  Estimasi nilai  : tidak tersedia (gagal ambil harga token)")
+            print()
 
 
 if __name__ == "__main__":

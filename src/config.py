@@ -27,7 +27,7 @@ class Thresholds:
 
 @dataclass(frozen=True)
 class Config:
-    wallet_address: str
+    wallet_addresses: list[str]
     rpc_url: str
     thresholds: Thresholds
     poll_interval_seconds: int
@@ -40,6 +40,7 @@ class Config:
     journal_file: Path
     telegram_bot_token: str
     telegram_chat_id: str
+    failure_alert_threshold: int
 
 
 def load_config(config_path: str | Path = "config.yaml", env_path: str | Path = ".env") -> Config:
@@ -60,10 +61,18 @@ def load_config(config_path: str | Path = "config.yaml", env_path: str | Path = 
     with open(config_path, "r", encoding="utf-8") as f:
         raw = yaml.safe_load(f)
 
-    wallet_address = raw.get("wallet_address", "")
-    if not wallet_address or wallet_address.startswith("GANTI_DENGAN"):
+    # `wallet_addresses` (list) is preferred; `wallet_address` (single string)
+    # is kept as a backward-compatible alias for existing config.yaml files.
+    wallet_addresses_raw = raw.get("wallet_addresses")
+    if wallet_addresses_raw:
+        wallet_addresses = [str(w).strip() for w in wallet_addresses_raw if str(w).strip()]
+    else:
+        single = str(raw.get("wallet_address", "")).strip()
+        wallet_addresses = [single] if single else []
+    wallet_addresses = [w for w in wallet_addresses if not w.startswith("GANTI_DENGAN")]
+    if not wallet_addresses:
         raise ValueError(
-            "wallet_address belum diisi di config.yaml. "
+            "wallet_addresses (atau wallet_address) belum diisi di config.yaml. "
             "Isi dengan wallet address PUBLIK Anda (bukan private key)."
         )
 
@@ -102,7 +111,7 @@ def load_config(config_path: str | Path = "config.yaml", env_path: str | Path = 
         journal_file = REPO_ROOT / journal_file
 
     return Config(
-        wallet_address=wallet_address,
+        wallet_addresses=wallet_addresses,
         rpc_url=raw.get("solana", {}).get("rpc_url", "https://api.mainnet-beta.solana.com"),
         thresholds=thresholds,
         poll_interval_seconds=int(raw.get("polling", {}).get("interval_seconds", 45)),
@@ -115,4 +124,5 @@ def load_config(config_path: str | Path = "config.yaml", env_path: str | Path = 
         journal_file=journal_file,
         telegram_bot_token=telegram_bot_token,
         telegram_chat_id=telegram_chat_id,
+        failure_alert_threshold=int(raw.get("monitoring", {}).get("failure_alert_threshold", 3)),
     )

@@ -6,7 +6,10 @@
 
 # Wallet address PUBLIK yang dipakai untuk LP di Meteora DLMM.
 # BUKAN private key / seed phrase. Bot ini tidak pernah meminta itu.
-wallet_address: "GANTI_DENGAN_WALLET_ADDRESS_PUBLIK_ANDA"
+# Boleh isi lebih dari satu wallet - hapus baris yang tidak dipakai.
+wallet_addresses:
+  - "GANTI_DENGAN_WALLET_ADDRESS_PUBLIK_ANDA"
+  # - "WALLET_KEDUA_ANDA_KALAU_ADA"
 
 solana:
   rpc_url: "https://api.mainnet-beta.solana.com"
@@ -49,3 +52,9 @@ database:
 logging:
   log_file: "logs/bot.log"
   journal_file: "logs/evaluations.jsonl"
+
+monitoring:
+  # Kirim 1 notifikasi peringatan kalau bot gagal baca posisi sekian kali
+  # berturut-turut (mis. RPC down), supaya "tidak ada notif" tidak
+  # disalahartikan sebagai "semua aman".
+  failure_alert_threshold: 3

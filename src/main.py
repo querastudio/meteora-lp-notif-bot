@@ -37,8 +37,12 @@ def build_valued_positions(raw_positions, config: Config, logger) -> list[Valued
 
         value_usd = None
         if price_x is not None and price_y is not None and p.token_x_decimals is not None and p.token_y_decimals is not None:
-            amount_x = (p.total_x_amount + p.fee_x_unclaimed) / (10 ** p.token_x_decimals)
-            amount_y = (p.total_y_amount + p.fee_y_unclaimed) / (10 ** p.token_y_decimals)
+            # Termasuk fee yang SUDAH diklaim (total_claimed_fee_x/y) supaya
+            # klaim fee manual lewat app Meteora tidak terlihat seperti
+            # penurunan nilai posisi - itu cuma memindahkan fee dari
+            # "belum diklaim" ke "sudah diklaim", nilainya tetap milik user.
+            amount_x = (p.total_x_amount + p.fee_x_unclaimed + p.total_claimed_fee_x) / (10 ** p.token_x_decimals)
+            amount_y = (p.total_y_amount + p.fee_y_unclaimed + p.total_claimed_fee_y) / (10 ** p.token_y_decimals)
             value_usd = amount_x * price_x + amount_y * price_y
         else:
             logger.warning(
@@ -54,15 +58,58 @@ def build_valued_positions(raw_positions, config: Config, logger) -> list[Valued
     return valued
 
 
-def run_once(config: Config, store: StateStore, notifier: TelegramNotifier, journal: JournalWriter, logger) -> None:
+def _handle_fetch_success(store: StateStore, wallet_address: str, logger) -> None:
+    health = store.get_health(wallet_address)
+    if health.consecutive_failures > 0:
+        if health.failure_alert_sent:
+            logger.info("Wallet %s pulih setelah %d kegagalan berturut-turut.", wallet_address, health.consecutive_failures)
+        health.consecutive_failures = 0
+        health.failure_alert_sent = False
+        store.save_health(health)
+
+
+def _handle_fetch_failure(store: StateStore, wallet_address: str, notifier: TelegramNotifier, config: Config, logger) -> None:
+    health = store.get_health(wallet_address)
+    health.consecutive_failures += 1
+    should_alert = (
+        health.consecutive_failures >= config.failure_alert_threshold and not health.failure_alert_sent
+    )
+    store.save_health(health)
+    if should_alert:
+        message = (
+            f"⚠️ Bot gagal membaca posisi wallet {wallet_address} "
+            f"{health.consecutive_failures}x berturut-turut. Cek RPC/koneksi - "
+            f"tidak ada notifikasi lain yang bisa terkirim sampai ini pulih."
+        )
+        sent = notifier.send(message)
+        logger.warning("Alert kegagalan beruntun terkirim: %s", sent)
+        if sent:
+            health.failure_alert_sent = True
+            store.save_health(health)
+
+
+def _recover_notice(store: StateStore, wallet_address: str, notifier: TelegramNotifier, logger, had_alert: bool) -> None:
+    if had_alert:
+        notifier.send(f"✅ Bot berhasil membaca posisi wallet {wallet_address} lagi - pemantauan pulih normal.")
+
+
+def run_once_for_wallet(wallet_address: str, config: Config, store: StateStore, notifier: TelegramNotifier, journal: JournalWriter, logger) -> None:
+    health_before = store.get_health(wallet_address)
+    known_pubkeys = store.list_pubkeys_with_known_open_time()
+
     try:
-        raw_positions = fetch_positions(config.wallet_address, config.rpc_url, config.node_reader_script)
+        raw_positions = fetch_positions(wallet_address, config.rpc_url, config.node_reader_script, known_pubkeys)
     except MeteoraReadError as exc:
-        logger.error("Gagal membaca posisi: %s", exc)
+        logger.error("Gagal membaca posisi wallet %s: %s", wallet_address, exc)
+        _handle_fetch_failure(store, wallet_address, notifier, config, logger)
         return
 
+    had_alert = health_before.failure_alert_sent
+    _handle_fetch_success(store, wallet_address, logger)
+    _recover_notice(store, wallet_address, notifier, logger, had_alert)
+
     seen_pubkeys = {p.position_pubkey for p in raw_positions}
-    newly_closed = store.mark_missing_as_closed(seen_pubkeys)
+    newly_closed = store.mark_missing_as_closed(wallet_address, seen_pubkeys)
     for pubkey in newly_closed:
         logger.info("Posisi %s tidak terlihat lagi di wallet, ditandai closed.", pubkey)
 
@@ -75,19 +122,26 @@ def run_once(config: Config, store: StateStore, notifier: TelegramNotifier, jour
             if valued.value_usd is None:
                 # Belum bisa tentukan baseline nilai deposit tanpa harga - tunggu poll berikutnya.
                 continue
-            state = store.create(raw.position_pubkey, raw.lb_pair_pubkey, valued.pair_label, valued.value_usd)
+            state = store.create(
+                raw.position_pubkey, wallet_address, raw.lb_pair_pubkey, valued.pair_label,
+                valued.value_usd, position_opened_at=raw.opened_at,
+            )
             logger.info(
-                "Posisi baru terdeteksi: %s (%s), baseline nilai = $%.4f",
+                "Posisi baru terdeteksi: %s (%s) wallet %s, baseline nilai = $%.4f",
                 raw.position_pubkey,
                 valued.pair_label,
+                wallet_address,
                 valued.value_usd,
             )
+        elif state.position_opened_at is None and raw.opened_at is not None:
+            state.position_opened_at = raw.opened_at
 
         events = conditions.evaluate_position(state, valued, config)
         store.save(state)
 
         journal.write(
             {
+                "wallet_address": wallet_address,
                 "position_pubkey": raw.position_pubkey,
                 "pair": valued.pair_label,
                 "value_usd": valued.value_usd,
@@ -106,6 +160,11 @@ def run_once(config: Config, store: StateStore, notifier: TelegramNotifier, jour
             )
 
 
+def run_once(config: Config, store: StateStore, notifier: TelegramNotifier, journal: JournalWriter, logger) -> None:
+    for wallet_address in config.wallet_addresses:
+        run_once_for_wallet(wallet_address, config, store, notifier, journal, logger)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Meteora DLMM read-only monitoring bot")
     parser.add_argument("--config", default="config.yaml")
@@ -121,7 +180,7 @@ def main() -> None:
 
     logger.info(
         "Bot monitoring dimulai (read-only). Wallet: %s | Interval: %ss",
-        config.wallet_address,
+        ", ".join(config.wallet_addresses),
         config.poll_interval_seconds,
     )
 

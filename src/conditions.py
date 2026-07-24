@@ -49,9 +49,12 @@ def evaluate_position(state: PositionState, valued: ValuedPosition, config: Conf
     if raw.in_range:
         state.ever_in_range = True
 
-    # 4) IDLE TIMEOUT - posisi belum pernah masuk range sampai batas waktu
+    # 4) IDLE TIMEOUT - posisi belum pernah masuk range sampai batas waktu.
+    # Pakai waktu pembuatan on-chain kalau sudah berhasil diambil (lebih
+    # akurat), fallback ke waktu pertama kali bot melihat posisi ini kalau
+    # belum/tidak berhasil diambil.
     if not state.ever_in_range and not state.notified_idle:
-        entry_dt = _parse_iso(state.entry_time)
+        entry_dt = _parse_iso(state.idle_clock_start)
         elapsed_hours = (now - entry_dt).total_seconds() / 3600.0
         if elapsed_hours >= thresholds.idle_timeout_hours:
             events.append(

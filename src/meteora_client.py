@@ -21,20 +21,29 @@ class MeteoraReadError(RuntimeError):
     pass
 
 
-def fetch_positions(wallet_address: str, rpc_url: str, node_reader_script) -> list[RawPosition]:
+def fetch_positions(
+    wallet_address: str,
+    rpc_url: str,
+    node_reader_script,
+    known_pubkeys: set[str] | None = None,
+) -> list[RawPosition]:
     """Fetch all open DLMM positions for `wallet_address` (public key only).
 
-    Runs `node node_reader/fetch_positions.js <wallet> <rpc_url>` and parses
-    the JSON it prints to stdout. Raises MeteoraReadError on failure so the
-    caller can log it and simply skip this poll cycle.
+    Runs `node node_reader/fetch_positions.js <wallet> <rpc_url> <known_pubkeys>`
+    and parses the JSON it prints to stdout. `known_pubkeys` (positions we
+    already have state for) lets the reader skip the extra on-chain lookup
+    it does for brand-new positions, so RPC cost doesn't grow every poll.
+    Raises MeteoraReadError on failure so the caller can log it and simply
+    skip this poll cycle.
     """
-    cmd = ["node", str(node_reader_script), wallet_address, rpc_url]
+    known_arg = ",".join(sorted(known_pubkeys)) if known_pubkeys else ""
+    cmd = ["node", str(node_reader_script), wallet_address, rpc_url, known_arg]
     try:
         result = subprocess.run(
             cmd,
             capture_output=True,
             text=True,
-            timeout=60,
+            timeout=90,
             check=False,
         )
     except FileNotFoundError as exc:
@@ -72,6 +81,9 @@ def fetch_positions(wallet_address: str, rpc_url: str, node_reader_script) -> li
                 total_y_amount=int(item["total_y_amount"]),
                 fee_x_unclaimed=int(item["fee_x_unclaimed"]),
                 fee_y_unclaimed=int(item["fee_y_unclaimed"]),
+                total_claimed_fee_x=int(item.get("total_claimed_fee_x") or 0),
+                total_claimed_fee_y=int(item.get("total_claimed_fee_y") or 0),
+                opened_at=item.get("opened_at"),
             )
         )
     return positions

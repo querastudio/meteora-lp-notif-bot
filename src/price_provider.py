@@ -26,16 +26,7 @@ KNOWN_SYMBOLS = {
 _symbol_cache: dict[str, str] = dict(KNOWN_SYMBOLS)
 
 
-def get_usd_prices(mints: list[str], base_url: str) -> dict[str, float]:
-    """Return {mint: usd_price} for as many mints as the API could resolve.
-
-    Missing/failed mints are simply absent from the result - callers must
-    treat that as "PnL unavailable this poll", not crash the loop.
-    """
-    mints = [m for m in dict.fromkeys(mints) if m]  # dedupe, drop None/empty
-    if not mints:
-        return {}
-
+def _get_jupiter_prices(mints: list[str], base_url: str) -> dict[str, float]:
     try:
         resp = requests.get(base_url, params={"ids": ",".join(mints)}, timeout=15)
         resp.raise_for_status()
@@ -60,6 +51,68 @@ def get_usd_prices(mints: list[str], base_url: str) -> dict[str, float]:
             prices[mint] = float(price_val)
         except (TypeError, ValueError):
             logger.warning("Format harga tidak dikenali untuk mint %s: %r", mint, entry)
+    return prices
+
+
+def _get_dexscreener_prices(mints: list[str]) -> dict[str, float]:
+    """Fallback price source for mints Jupiter has no data for - common for
+    very new/illiquid pump.fun-style tokens that a DLMM pool got created for
+    before the bigger price aggregators picked them up. Public, no API key.
+    """
+    if not mints:
+        return {}
+    try:
+        resp = requests.get(
+            f"https://api.dexscreener.com/latest/dex/tokens/{','.join(mints)}", timeout=15
+        )
+        resp.raise_for_status()
+        payload = resp.json()
+    except Exception as exc:  # noqa: BLE001
+        logger.warning("Gagal ambil harga fallback dari DexScreener: %s", exc)
+        return {}
+
+    mint_set = set(mints)
+    best_liquidity: dict[str, float] = {}
+    prices: dict[str, float] = {}
+    for pair in payload.get("pairs") or []:
+        base = pair.get("baseToken") or {}
+        mint = base.get("address")
+        if mint not in mint_set:
+            continue
+        try:
+            price = float(pair.get("priceUsd"))
+        except (TypeError, ValueError):
+            continue
+        # A token can have many pools (Raydium, Meteora, pump.fun bonding
+        # curve, ...) - use the one with the most liquidity as the best
+        # estimate of the "real" price.
+        liquidity = ((pair.get("liquidity") or {}).get("usd")) or 0
+        if mint not in best_liquidity or liquidity > best_liquidity[mint]:
+            best_liquidity[mint] = liquidity
+            prices[mint] = price
+    return prices
+
+
+def get_usd_prices(mints: list[str], base_url: str) -> dict[str, float]:
+    """Return {mint: usd_price} for as many mints as could be resolved,
+    trying Jupiter first and DexScreener as a fallback for whatever's left.
+
+    Missing/failed mints are simply absent from the result - callers must
+    treat that as "PnL unavailable this poll", not crash the loop.
+    """
+    mints = [m for m in dict.fromkeys(mints) if m]  # dedupe, drop None/empty
+    if not mints:
+        return {}
+
+    prices = _get_jupiter_prices(mints, base_url)
+
+    missing = [m for m in mints if m not in prices]
+    if missing:
+        fallback_prices = _get_dexscreener_prices(missing)
+        if fallback_prices:
+            logger.info("Harga %d mint diambil dari fallback DexScreener.", len(fallback_prices))
+        prices.update(fallback_prices)
+
     return prices
 
 
