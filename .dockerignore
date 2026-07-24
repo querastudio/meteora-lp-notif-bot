@@ -1,0 +1,13 @@
+.git
+.github
+__pycache__
+*.pyc
+.venv
+venv
+.env
+config.yaml
+data
+logs
+node_reader/node_modules
+scripts
+README.md

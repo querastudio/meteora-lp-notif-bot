@@ -1,0 +1,19 @@
+name: Docker Build Check
+
+# Verifikasi manual bahwa Dockerfile (dipakai untuk deploy ke Railway/Render
+# sebagai background worker selalu-nyala) benar-benar bisa di-build, tanpa
+# perlu mendaftar ke platform hosting mana pun dulu.
+on:
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image
+        run: docker build -t meteora-bot-check .
+      - name: Sanity check entrypoint (tanpa kredensial asli - harus gagal dengan pesan jelas)
+        run: |
+          docker run --rm meteora-bot-check 2>&1 | tee run_output.txt || true
+          grep -q "WALLET_ADDRESS, TELEGRAM_BOT_TOKEN, dan TELEGRAM_CHAT_ID wajib diisi" run_output.txt
