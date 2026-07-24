@@ -2,3 +2,7 @@
 2026-07-24 13:05:21,889 [WARNING] meteora_bot: Harga/desimal tidak lengkap untuk posisi 6WSDNsjf17Yt3Axv4AChLTQyrmmjJxPtB12YaSAa9A8z (6Z6q..pump/SOL) - PnL dilewati poll ini.
 2026-07-24 13:05:21,904 [WARNING] meteora_bot: Harga/desimal tidak lengkap untuk posisi 8SuJpv8sZDBbpRUma2V75PeqjiRS56KYk7RCwQLyis5t (Akch..pump/SOL) - PnL dilewati poll ini.
 2026-07-24 13:05:21,918 [WARNING] meteora_bot: Harga/desimal tidak lengkap untuk posisi G4toXLxhMejESpPzLqecpBLs4KmxsNddXusvm3FC9uVq (23LG..pump/SOL) - PnL dilewati poll ini.
+2026-07-24 13:07:05,241 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-07-24 13:07:06,382 [INFO] meteora_bot: Posisi baru terdeteksi: 6WSDNsjf17Yt3Axv4AChLTQyrmmjJxPtB12YaSAa9A8z (6Z6q..pump-SOL), baseline nilai = $201.1077
+2026-07-24 13:07:06,384 [INFO] meteora_bot: Posisi baru terdeteksi: 8SuJpv8sZDBbpRUma2V75PeqjiRS56KYk7RCwQLyis5t (Akch..pump-SOL), baseline nilai = $201.1077
+2026-07-24 13:07:06,386 [INFO] meteora_bot: Posisi baru terdeteksi: G4toXLxhMejESpPzLqecpBLs4KmxsNddXusvm3FC9uVq (23LG..pump-SOL), baseline nilai = $199.9652
