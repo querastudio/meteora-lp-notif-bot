@@ -1,0 +1,51 @@
+# Salin file ini ke config.yaml lalu isi dengan data Anda sendiri.
+# JANGAN commit config.yaml (sudah ada di .gitignore) kalau berisi wallet asli
+# Anda dan Anda ingin repo tetap private/rapi — tapi ingat wallet address
+# memang publik, jadi tidak fatal kalau bocor. Yang WAJIB dirahasiakan
+# (Telegram token) ada di .env, bukan di sini.
+
+# Wallet address PUBLIK yang dipakai untuk LP di Meteora DLMM.
+# BUKAN private key / seed phrase. Bot ini tidak pernah meminta itu.
+wallet_address: "GANTI_DENGAN_WALLET_ADDRESS_PUBLIK_ANDA"
+
+solana:
+  rpc_url: "https://api.mainnet-beta.solana.com"
+  # Kalau nanti polling makin sering / posisi makin banyak dan RPC publik
+  # mulai rate-limit, ganti ke RPC berbayar (Helius/QuickNode), misal:
+  # rpc_url: "https://mainnet.helius-rpc.com/?api-key=xxxxxxxx"
+
+thresholds:
+  sl_percent: -10.0            # Stop loss: notif kalau PnL <= nilai ini
+  tp_floor_lock: 3.0           # PnL naik ke titik ini -> profit lock aktif, mulai trailing
+  tp_trailing_drawdown: 5.0    # Turun sekian poin persen dari peak -> trailing stop terpicu
+  tp_fast_threshold: 5.0       # Lompat langsung ke PnL >= ini tanpa sempat floor-lock -> notif TP cepat
+  idle_timeout_hours: 3        # Posisi belum pernah in-range selama sekian jam -> notif idle
+
+polling:
+  interval_seconds: 45         # 30-60 detik sesuai rekomendasi
+
+price_api:
+  # Endpoint publik untuk harga token (USD), dipakai untuk hitung nilai posisi.
+  # Endpoint pihak ketiga bisa berubah dari waktu ke waktu — kalau bot mulai
+  # gagal ambil harga, cek endpoint terbaru di https://dev.jup.ag dan update
+  # nilai ini tanpa perlu ubah kode.
+  base_url: "https://lite-api.jup.ag/price/v3"
+
+meteora:
+  # Dipakai untuk menyusun link posisi di notifikasi Telegram.
+  app_base_url: "https://app.meteora.ag/dlmm"
+
+timezone:
+  utc_offset_hours: 7          # WIB = UTC+7
+
+node_reader:
+  # Path ke script Node.js read-only yang membaca posisi lewat SDK resmi
+  # @meteora-ag/dlmm. Biarkan default kalau struktur folder tidak diubah.
+  script_path: "node_reader/fetch_positions.js"
+
+database:
+  path: "data/state.db"
+
+logging:
+  log_file: "logs/bot.log"
+  journal_file: "logs/evaluations.jsonl"

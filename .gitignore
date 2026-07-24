@@ -1,0 +1,24 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# secrets
+.env
+
+# local state / logs (jangan commit data posisi & log)
+data/*
+!data/.gitkeep
+logs/*
+!logs/.gitkeep
+
+# node reader deps
+node_reader/node_modules/
+node_reader/package-lock.json
+
+# editor / os
+.vscode/
+.idea/
+.DS_Store
