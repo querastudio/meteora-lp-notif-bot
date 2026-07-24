@@ -5,8 +5,9 @@ __pycache__/
 venv/
 env/
 
-# secrets
+# secrets & config lokal (isinya wallet address + threshold pribadi Anda)
 .env
+config.yaml
 
 # local state / logs (jangan commit data posisi & log)
 data/*
