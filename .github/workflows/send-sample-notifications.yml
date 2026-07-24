@@ -1,0 +1,44 @@
+name: Send Sample Notifications
+
+# Mengirim contoh tiap jenis notifikasi bot (SL, floor-lock, trailing stop,
+# floor touch, fast TP, idle timeout) ke Telegram - pakai posisi & PnL
+# rekaan, TIDAK membaca wallet asli / TIDAK menyentuh data/state.db.
+# Jalankan manual lewat tab Actions -> Send Sample Notifications -> Run workflow.
+on:
+  workflow_dispatch: {}
+
+jobs:
+  send-samples:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Write minimal config.yaml (sample tidak membaca wallet/RPC asli)
+        run: |
+          cat > config.yaml <<YAML
+          wallet_address: "SampleWalletTidakDipakai11111111111111111"
+          thresholds:
+            sl_percent: -10.0
+            tp_floor_lock: 3.0
+            tp_trailing_drawdown: 5.0
+            tp_fast_threshold: 5.0
+            idle_timeout_hours: 3
+          meteora:
+            app_base_url: "https://app.meteora.ag/dlmm"
+          timezone:
+            utc_offset_hours: 7
+          YAML
+
+      - name: Send sample notifications
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python -m scripts.send_sample_notifications
