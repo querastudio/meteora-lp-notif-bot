@@ -50,7 +50,12 @@ def get_usd_prices(mints: list[str], base_url: str) -> dict[str, float]:
         entry = data.get(mint)
         if entry is None:
             continue
-        price_val = entry.get("price") if isinstance(entry, dict) else entry
+        # Confirmed live response shape (lite-api.jup.ag/price/v3): {"usdPrice": ...}.
+        # Keep "price" as a fallback in case the API reverts/changes again.
+        if isinstance(entry, dict):
+            price_val = entry.get("usdPrice", entry.get("price"))
+        else:
+            price_val = entry
         try:
             prices[mint] = float(price_val)
         except (TypeError, ValueError):
