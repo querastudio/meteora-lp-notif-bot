@@ -22,7 +22,14 @@
 
 const { Connection, PublicKey } = require("@solana/web3.js");
 const { getMint } = require("@solana/spl-token");
-const DLMM = require("@meteora-ag/dlmm").default;
+// The package's CommonJS build exports the DLMM class as module.exports
+// itself (with everything else attached as static properties) - there is
+// no `.default` in this version. Handle both shapes defensively in case
+// that changes again in a future SDK release.
+const dlmmModule = require("@meteora-ag/dlmm");
+const DLMM = typeof dlmmModule.getAllLbPairPositionsByUser === "function"
+  ? dlmmModule
+  : dlmmModule.default;
 
 function toStr(bnLike) {
   if (bnLike === null || bnLike === undefined) return null;
