@@ -51,3 +51,5 @@
 2026-07-25 11:51:17,598 [INFO] meteora_bot: Posisi baru terdeteksi: HCKVXNuuhLFjFyPTT57qYFrJDAA5sH2vJTpyvddUdDD7 (BUNKEE-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $147.7555
 2026-07-25 13:04:59,276 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-07-25 13:05:00,200 [INFO] meteora_bot: Posisi 946rTmwAME7iMTdVnDq2NkgxnpBS9Y2hVueUGSjPQXQd tidak terlihat lagi di wallet, ditandai closed.
+2026-07-25 14:41:26,153 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-07-25 14:41:27,679 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk BUNKEE-SOL: terkirim
