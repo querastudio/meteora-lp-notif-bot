@@ -40,7 +40,7 @@ Selain 4 kondisi di atas, ada juga:
   `monitoring.failure_alert_threshold`), Anda dapat 1 notifikasi peringatan
   supaya "tidak ada notif" tidak disalahartikan sebagai "semua aman". Begitu
   berhasil baca lagi, dapat notifikasi pemulihan.
-- **Ringkasan harian (📊)** — tiap hari jam 08:00 WIB, dapat 1 pesan berisi
+- **Ringkasan harian (📊)** — tiap hari jam 08:00 WITA (Bali), dapat 1 pesan berisi
   status semua posisi aktif (PnL, peak, status range) sekaligus, tidak
   perlu menunggu sampai ada masalah untuk tahu kondisi posisi Anda.
 
@@ -122,7 +122,7 @@ meteora-lp-notif-bot/
 │   ├── state_store.py      # persist state ke SQLite (posisi + kesehatan bot)
 │   ├── notifier.py         # kirim pesan Telegram
 │   ├── logging_setup.py    # log file + journal JSONL (jurnal trading)
-│   ├── timeutil.py         # format waktu WIB
+│   ├── timeutil.py         # format waktu WITA (Bali)
 │   └── main.py             # loop polling utama (multi-wallet)
 ├── data/                   # data/state.db (SQLite, di-gitignore)
 └── logs/                   # bot.log + evaluations.jsonl (di-gitignore)
@@ -246,7 +246,7 @@ Cara mengaktifkan:
    saja → lihat log step "Run one monitoring poll"). State (peak PnL,
    status notifikasi) otomatis di-commit balik ke repo di file
    `data/state.db` supaya tidak hilang antar-run.
-5. Tiap hari jam 08:00 WIB, workflow yang sama otomatis mengirim 1 pesan
+5. Tiap hari jam 08:00 WITA (Bali), workflow yang sama otomatis mengirim 1 pesan
    ringkasan status semua posisi (lihat step "Send daily summary").
 
 Kalau mau ubah interval 5 menit atau jam ringkasan harian itu, edit baris
@@ -262,7 +262,7 @@ kalau jamnya diubah).
   asli), diberi label "CONTOH/TEST" supaya tidak membingungkan.
 - `python -m scripts.send_daily_summary` — kirim ringkasan status semua
   posisi yang sedang dipantau (dari data yang sudah tersimpan), kapan saja
-  tanpa menunggu jadwal jam 08:00 WIB.
+  tanpa menunggu jadwal jam 08:00 WITA.
 
 ## Membaca Log
 

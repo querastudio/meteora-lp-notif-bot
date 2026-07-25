@@ -39,7 +39,7 @@ meteora:
   app_base_url: "https://app.meteora.ag/dlmm"
 
 timezone:
-  utc_offset_hours: 7          # WIB = UTC+7
+  utc_offset_hours: 8          # WITA (Bali) = UTC+8
 
 node_reader:
   # Path ke script Node.js read-only yang membaca posisi lewat SDK resmi

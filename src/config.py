@@ -117,7 +117,7 @@ def load_config(config_path: str | Path = "config.yaml", env_path: str | Path = 
         poll_interval_seconds=int(raw.get("polling", {}).get("interval_seconds", 45)),
         price_api_base_url=raw.get("price_api", {}).get("base_url", "https://lite-api.jup.ag/price/v3"),
         meteora_app_base_url=raw.get("meteora", {}).get("app_base_url", "https://app.meteora.ag/dlmm"),
-        utc_offset_hours=int(raw.get("timezone", {}).get("utc_offset_hours", 7)),
+        utc_offset_hours=int(raw.get("timezone", {}).get("utc_offset_hours", 8)),  # default WITA (Bali)
         node_reader_script=node_script_path,
         db_path=db_path,
         log_file=log_file,

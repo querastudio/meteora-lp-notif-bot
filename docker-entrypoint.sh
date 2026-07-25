@@ -41,7 +41,7 @@ price_api:
 meteora:
   app_base_url: "https://app.meteora.ag/dlmm"
 timezone:
-  utc_offset_hours: 7
+  utc_offset_hours: 8
 node_reader:
   script_path: "node_reader/fetch_positions.js"
 database:

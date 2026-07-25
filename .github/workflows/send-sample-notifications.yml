@@ -34,7 +34,7 @@ jobs:
           meteora:
             app_base_url: "https://app.meteora.ag/dlmm"
           timezone:
-            utc_offset_hours: 7
+            utc_offset_hours: 8
           YAML
 
       - name: Send sample notifications

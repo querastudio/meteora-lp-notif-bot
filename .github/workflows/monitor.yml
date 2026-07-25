@@ -10,7 +10,7 @@ name: Meteora DLMM Monitor
 on:
   schedule:
     - cron: "*/5 * * * *"
-    - cron: "0 1 * * *" # 01:00 UTC = 08:00 WIB - juga memicu ringkasan harian
+    - cron: "0 0 * * *" # 00:00 UTC = 08:00 WITA (Bali) - juga memicu ringkasan harian
   workflow_dispatch: {}
 
 permissions:
@@ -86,7 +86,7 @@ jobs:
           meteora:
             app_base_url: "https://app.meteora.ag/dlmm"
           timezone:
-            utc_offset_hours: 7
+            utc_offset_hours: 8
           node_reader:
             script_path: "node_reader/fetch_positions.js"
           database:
@@ -104,8 +104,8 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python -m src.main --once
 
-      - name: Send daily summary (hanya saat jadwal harian 08:00 WIB)
-        if: github.event.schedule == '0 1 * * *'
+      - name: Send daily summary (hanya saat jadwal harian 08:00 WITA)
+        if: github.event.schedule == '0 0 * * *'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
