@@ -79,6 +79,14 @@ def _get_dexscreener_prices(mints: list[str]) -> dict[str, float]:
         mint = base.get("address")
         if mint not in mint_set:
             continue
+
+        # Bonus: warm the symbol cache while we're already fetching this
+        # pair, so resolve_token_symbol() usually doesn't need its own
+        # extra request for tokens that already needed a price fallback.
+        symbol = base.get("symbol")
+        if symbol and mint not in _symbol_cache:
+            _symbol_cache[mint] = symbol
+
         try:
             price = float(pair.get("priceUsd"))
         except (TypeError, ValueError):
@@ -116,22 +124,43 @@ def get_usd_prices(mints: list[str], base_url: str) -> dict[str, float]:
     return prices
 
 
+def _dexscreener_symbol(mint: str) -> str | None:
+    try:
+        resp = requests.get(f"https://api.dexscreener.com/latest/dex/tokens/{mint}", timeout=10)
+        if resp.ok:
+            for pair in resp.json().get("pairs") or []:
+                base = pair.get("baseToken") or {}
+                if base.get("address") == mint and base.get("symbol"):
+                    return base["symbol"]
+    except Exception as exc:  # noqa: BLE001
+        logger.debug("Gagal resolve symbol dari DexScreener untuk %s: %s", mint, exc)
+    return None
+
+
+def _jupiter_symbol(mint: str) -> str | None:
+    try:
+        resp = requests.get(f"https://lite-api.jup.ag/tokens/v1/token/{mint}", timeout=10)
+        if resp.ok:
+            return resp.json().get("symbol")
+    except Exception as exc:  # noqa: BLE001
+        logger.debug("Gagal resolve symbol dari Jupiter untuk %s: %s", mint, exc)
+    return None
+
+
 def resolve_token_symbol(mint: str | None) -> str:
-    """Best-effort symbol lookup. Falls back to a truncated mint address."""
+    """Best-effort symbol lookup: DexScreener first (best coverage for very
+    new pump.fun-style tokens, and often already warmed in the cache by
+    get_usd_prices()'s fallback path), then Jupiter's token metadata API,
+    falling back to a truncated mint address only if both fail."""
     if not mint:
         return "?"
     if mint in _symbol_cache:
         return _symbol_cache[mint]
 
-    try:
-        resp = requests.get(f"https://lite-api.jup.ag/tokens/v1/token/{mint}", timeout=10)
-        if resp.ok:
-            symbol = resp.json().get("symbol")
-            if symbol:
-                _symbol_cache[mint] = symbol
-                return symbol
-    except Exception as exc:  # noqa: BLE001
-        logger.debug("Gagal resolve symbol untuk %s: %s", mint, exc)
+    symbol = _dexscreener_symbol(mint) or _jupiter_symbol(mint)
+    if symbol:
+        _symbol_cache[mint] = symbol
+        return symbol
 
     short = f"{mint[:4]}..{mint[-4:]}"
     _symbol_cache[mint] = short
