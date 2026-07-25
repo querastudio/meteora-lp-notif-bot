@@ -40,3 +40,6 @@
 2026-07-25 09:06:08,057 [INFO] meteora_bot: Posisi 9aQu5Fsyx8Hy9zyNbF4horjZxy3pGiboC1FwtN5fdATr tidak terlihat lagi di wallet, ditandai closed.
 2026-07-25 09:06:08,937 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk 6Z6q..pump-SOL: terkirim
 2026-07-25 09:06:09,012 [INFO] meteora_bot: Posisi baru terdeteksi: EiChpLmvvoWJ8RPwKfbswy4x7bj9JMH5iXrt9GaMBLUa (9Pfy..pump-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $147.4176
+2026-07-25 10:22:53,027 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-07-25 10:22:54,379 [INFO] meteora_bot: Posisi 53cGJegfLWsYoq3d6EFmKmzL1FbMNdjYnZqoVYcAwUcs tidak terlihat lagi di wallet, ditandai closed.
+2026-07-25 10:22:54,906 [INFO] meteora_bot: Posisi baru terdeteksi: 4yLi79LZsu2SQPPmB2k5wh7iUMJncN7zZesM8FxDnqee (BUNKEE-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $147.7929
