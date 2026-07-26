@@ -79,3 +79,8 @@
 2026-07-26 00:14:58,199 [INFO] meteora_bot: Posisi 8VmCQRK2YEZUEgCrsieHEJujz7bhCPZhToihZj5ueMNi tidak terlihat lagi di wallet, ditandai closed.
 2026-07-26 00:14:58,438 [INFO] meteora_bot: Posisi baru terdeteksi: DPsMeVsfSGPNo4Kr7aNYNS8X6ysPSTohq6oVXcJojmsz (BUNKEE-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $149.1706
 2026-07-26 00:14:58,439 [INFO] meteora_bot: Posisi baru terdeteksi: GqUWbaPdXYx1Kfw72JCRubTrrcFEKVMaN7EXJ9uutQtX (Cog-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $149.2281
+2026-07-26 02:36:44,561 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-07-26 02:36:45,493 [INFO] meteora_bot: Posisi 45AN923wZmKnXofvdqpr54yUAaUZfSV223zaC7RCG11D tidak terlihat lagi di wallet, ditandai closed.
+2026-07-26 02:36:45,494 [INFO] meteora_bot: Posisi 3KU7eoEqAKMKVupxUExPpByoXTeVa2XWzBvSZ6SwVBys tidak terlihat lagi di wallet, ditandai closed.
+2026-07-26 02:36:45,494 [INFO] meteora_bot: Posisi GqUWbaPdXYx1Kfw72JCRubTrrcFEKVMaN7EXJ9uutQtX tidak terlihat lagi di wallet, ditandai closed.
+2026-07-26 02:36:46,217 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk BUNKEE-SOL: terkirim
