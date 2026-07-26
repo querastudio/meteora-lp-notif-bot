@@ -105,3 +105,6 @@
 2026-07-26 21:38:05,997 [INFO] meteora_bot: Posisi G5V13QE3qm5VxUzUM2zxrTC95JgB2v7pC5pgCj2At9Bs tidak terlihat lagi di wallet, ditandai closed.
 2026-07-26 21:38:06,230 [INFO] meteora_bot: Posisi baru terdeteksi: CepseBSqgh17v7jDDm1oFrhAxBsf6aV1fZ9jdGGxfG4M (CATE-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $151.1309
 2026-07-26 21:38:06,917 [INFO] meteora_bot: Notifikasi [floor_lock] untuk BUNKEE-SOL: terkirim
+2026-07-26 22:40:50,436 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-07-26 22:40:51,810 [INFO] meteora_bot: Posisi DPsMeVsfSGPNo4Kr7aNYNS8X6ysPSTohq6oVXcJojmsz tidak terlihat lagi di wallet, ditandai closed.
+2026-07-26 22:40:52,947 [INFO] meteora_bot: Notifikasi [floor_lock] untuk SalaryCat-SOL: terkirim
