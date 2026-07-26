@@ -74,3 +74,8 @@
 2026-07-25 22:07:06,872 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk sharkdog-SOL: terkirim
 2026-07-25 22:07:07,343 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk KET-SOL: terkirim
 2026-07-25 23:10:51,516 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-07-26 00:14:56,195 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-07-26 00:14:58,199 [INFO] meteora_bot: Posisi CtvsRXogQQbaQTRP8GdAp8rLfAmFZ5wSfCsX8W6NZZYX tidak terlihat lagi di wallet, ditandai closed.
+2026-07-26 00:14:58,199 [INFO] meteora_bot: Posisi 8VmCQRK2YEZUEgCrsieHEJujz7bhCPZhToihZj5ueMNi tidak terlihat lagi di wallet, ditandai closed.
+2026-07-26 00:14:58,438 [INFO] meteora_bot: Posisi baru terdeteksi: DPsMeVsfSGPNo4Kr7aNYNS8X6ysPSTohq6oVXcJojmsz (BUNKEE-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $149.1706
+2026-07-26 00:14:58,439 [INFO] meteora_bot: Posisi baru terdeteksi: GqUWbaPdXYx1Kfw72JCRubTrrcFEKVMaN7EXJ9uutQtX (Cog-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $149.2281
