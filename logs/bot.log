@@ -84,3 +84,5 @@
 2026-07-26 02:36:45,494 [INFO] meteora_bot: Posisi 3KU7eoEqAKMKVupxUExPpByoXTeVa2XWzBvSZ6SwVBys tidak terlihat lagi di wallet, ditandai closed.
 2026-07-26 02:36:45,494 [INFO] meteora_bot: Posisi GqUWbaPdXYx1Kfw72JCRubTrrcFEKVMaN7EXJ9uutQtX tidak terlihat lagi di wallet, ditandai closed.
 2026-07-26 02:36:46,217 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk BUNKEE-SOL: terkirim
+2026-07-26 04:01:53,482 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-07-26 04:01:55,236 [INFO] meteora_bot: Posisi baru terdeteksi: DY2XkD2XD6xPEM22VvXmn4WM8wCyAYHf4hrMSET56bZK (sharkdog-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $149.9479
