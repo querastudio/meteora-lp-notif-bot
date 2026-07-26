@@ -108,3 +108,6 @@
 2026-07-26 22:40:50,436 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-07-26 22:40:51,810 [INFO] meteora_bot: Posisi DPsMeVsfSGPNo4Kr7aNYNS8X6ysPSTohq6oVXcJojmsz tidak terlihat lagi di wallet, ditandai closed.
 2026-07-26 22:40:52,947 [INFO] meteora_bot: Notifikasi [floor_lock] untuk SalaryCat-SOL: terkirim
+2026-07-26 23:42:43,724 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-07-26 23:42:44,392 [INFO] meteora_bot: Posisi BYBDVEGuCALpX8JJ9YYUAEuQ9BiFsaVUCuNfj2vuNoui tidak terlihat lagi di wallet, ditandai closed.
+2026-07-26 23:42:44,392 [INFO] meteora_bot: Posisi CepseBSqgh17v7jDDm1oFrhAxBsf6aV1fZ9jdGGxfG4M tidak terlihat lagi di wallet, ditandai closed.
