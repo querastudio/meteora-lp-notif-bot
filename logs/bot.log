@@ -120,3 +120,6 @@
 2026-07-27 08:43:42,479 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-07-27 08:43:44,445 [INFO] meteora_bot: Posisi tJamRff6ytAGng65SUaXUNP3ZBBSScak83a5hVkeWFp tidak terlihat lagi di wallet, ditandai closed.
 2026-07-27 08:43:44,746 [INFO] meteora_bot: Posisi baru terdeteksi: BLaZYXi81q4yxfE3MkSe7XXNEYuSnBpfMivMRmwGzaHP (Nongwan-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $152.9130
+2026-07-27 12:00:33,239 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-07-27 12:00:33,817 [INFO] meteora_bot: Posisi EvZbAZ4rHPTBsGDoq8kWDCRmGzZmbp55wbxk82PqgLb4 tidak terlihat lagi di wallet, ditandai closed.
+2026-07-27 12:00:33,817 [INFO] meteora_bot: Posisi BLaZYXi81q4yxfE3MkSe7XXNEYuSnBpfMivMRmwGzaHP tidak terlihat lagi di wallet, ditandai closed.
