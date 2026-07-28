@@ -148,3 +148,8 @@
 2026-07-28 12:06:35,240 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-07-28 14:34:27,524 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-07-28 14:34:30,136 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk Brötchen-SOL: terkirim
+2026-07-28 16:21:24,751 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-07-28 16:21:27,693 [INFO] meteora_bot: Posisi GNQkkWZn22LPwUi7JvgfRowNCycVKjT719Ekptxp1WpZ tidak terlihat lagi di wallet, ditandai closed.
+2026-07-28 16:21:28,030 [INFO] meteora_bot: Posisi baru terdeteksi: qwcWiP8mKD3TTLjW8vKWJwwFhBfF4h7nHFQQHzcdwFW (Brötchen-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $148.4072
+2026-07-28 16:21:28,032 [INFO] meteora_bot: Posisi baru terdeteksi: 91ktBQdws1AY9giinNuVXwcQ7pXt4PCVPgu9mtubbtFg (Diary-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $148.3854
+2026-07-28 16:21:28,033 [INFO] meteora_bot: Posisi baru terdeteksi: GqFqupQVu3k36STctaVJ7hakgCp96tYm3miLUUQfXBCm (Tilly-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $148.3855
