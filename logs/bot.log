@@ -163,3 +163,5 @@
 2026-07-28 20:34:34,530 [INFO] meteora_bot: Posisi CoNXjp5bDNvjjoXVg8eCci4GjaHtGQnEbqKMMiYvzFJ tidak terlihat lagi di wallet, ditandai closed.
 2026-07-28 20:34:35,054 [INFO] meteora_bot: Posisi baru terdeteksi: DHvvGrEzDgNfoxLHUmpvdfiV23i5yqhbgzToeLSAbnA4 (FRANK-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $222.1881
 2026-07-28 20:34:35,056 [INFO] meteora_bot: Posisi baru terdeteksi: DRcbbEbitt69N25pZFRsbf8P1M7yRbAixXuRTMAdoJqH (Tilly-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $148.1255
+2026-07-28 21:45:16,156 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-07-28 21:45:21,141 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk Diary-SOL: terkirim
