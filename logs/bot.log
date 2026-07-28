@@ -146,3 +146,5 @@
 2026-07-28 10:01:11,672 [INFO] meteora_bot: Posisi AnTqmiuq9WpP2wHbSgyWnUvSu692G7prF8K6QiUWHvjH tidak terlihat lagi di wallet, ditandai closed.
 2026-07-28 10:01:15,144 [INFO] meteora_bot: Posisi baru terdeteksi: GNQkkWZn22LPwUi7JvgfRowNCycVKjT719Ekptxp1WpZ (Brötchen-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $146.3947
 2026-07-28 12:06:35,240 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-07-28 14:34:27,524 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-07-28 14:34:30,136 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk Brötchen-SOL: terkirim
