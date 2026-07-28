@@ -153,3 +153,4 @@
 2026-07-28 16:21:28,030 [INFO] meteora_bot: Posisi baru terdeteksi: qwcWiP8mKD3TTLjW8vKWJwwFhBfF4h7nHFQQHzcdwFW (Brötchen-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $148.4072
 2026-07-28 16:21:28,032 [INFO] meteora_bot: Posisi baru terdeteksi: 91ktBQdws1AY9giinNuVXwcQ7pXt4PCVPgu9mtubbtFg (Diary-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $148.3854
 2026-07-28 16:21:28,033 [INFO] meteora_bot: Posisi baru terdeteksi: GqFqupQVu3k36STctaVJ7hakgCp96tYm3miLUUQfXBCm (Tilly-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $148.3855
+2026-07-28 17:50:47,807 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
