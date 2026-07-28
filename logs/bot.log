@@ -141,3 +141,7 @@
 2026-07-28 07:18:47,113 [INFO] meteora_bot: Posisi 2puBGv5bQZanxxRwJLMwbd4RLRC7p2bf5igV3Zr81wMH tidak terlihat lagi di wallet, ditandai closed.
 2026-07-28 07:18:47,453 [INFO] meteora_bot: Posisi baru terdeteksi: 89ZnxKB2hNHcfDyqRexcX4oAX2hF7cZz2AVVK6Av1YLo (EGGDOG-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $146.9683
 2026-07-28 07:18:47,454 [INFO] meteora_bot: Posisi baru terdeteksi: AnTqmiuq9WpP2wHbSgyWnUvSu692G7prF8K6QiUWHvjH (BNUT-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $149.1567
+2026-07-28 10:01:09,459 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-07-28 10:01:11,671 [INFO] meteora_bot: Posisi 89ZnxKB2hNHcfDyqRexcX4oAX2hF7cZz2AVVK6Av1YLo tidak terlihat lagi di wallet, ditandai closed.
+2026-07-28 10:01:11,672 [INFO] meteora_bot: Posisi AnTqmiuq9WpP2wHbSgyWnUvSu692G7prF8K6QiUWHvjH tidak terlihat lagi di wallet, ditandai closed.
+2026-07-28 10:01:15,144 [INFO] meteora_bot: Posisi baru terdeteksi: GNQkkWZn22LPwUi7JvgfRowNCycVKjT719Ekptxp1WpZ (Brötchen-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $146.3947
