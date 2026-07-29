@@ -174,3 +174,6 @@
 2026-07-29 04:33:31,554 [INFO] meteora_bot: Posisi DHvvGrEzDgNfoxLHUmpvdfiV23i5yqhbgzToeLSAbnA4 tidak terlihat lagi di wallet, ditandai closed.
 2026-07-29 04:33:32,144 [INFO] meteora_bot: Posisi baru terdeteksi: 9ycFsjUWcG4yXYG9Gd8uT9stDRTRXbmb9mXA7YthTJ12 (Brötchen-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $146.1109
 2026-07-29 07:26:13,432 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-07-29 10:10:50,098 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-07-29 10:10:52,638 [INFO] meteora_bot: Posisi 9ycFsjUWcG4yXYG9Gd8uT9stDRTRXbmb9mXA7YthTJ12 tidak terlihat lagi di wallet, ditandai closed.
+2026-07-29 10:10:52,993 [INFO] meteora_bot: Posisi baru terdeteksi: 4jvsSSiJQGfyXva7pu5qMLbuNzugQhcdFmo4cjCchT32 (MarketCat-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $147.8870
