@@ -196,3 +196,6 @@
 2026-07-29 22:13:42,513 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-07-29 23:17:29,517 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-07-30 00:15:59,606 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-07-30 02:10:57,252 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-07-30 02:10:58,641 [INFO] meteora_bot: Posisi 59gHzkxN9FkkH1hVM6LZMPcdPyChzHEi6dE7KebDS1qN tidak terlihat lagi di wallet, ditandai closed.
+2026-07-30 02:10:58,642 [INFO] meteora_bot: Posisi Ewz8Rw6f54nHpBKxoZM9suDp3hdiuNibUiYN2ZyaZB3f tidak terlihat lagi di wallet, ditandai closed.
