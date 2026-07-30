@@ -206,3 +206,5 @@
 2026-07-30 09:05:35,179 [INFO] meteora_bot: Posisi baru terdeteksi: DvN6TGBaTvNCF11D4gNiNukwy2KLc854BsGJifQBeity (LUNA-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $147.5111
 2026-07-30 11:19:31,409 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-07-30 11:19:33,181 [INFO] meteora_bot: Posisi DvN6TGBaTvNCF11D4gNiNukwy2KLc854BsGJifQBeity tidak terlihat lagi di wallet, ditandai closed.
+2026-07-30 12:59:29,884 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-07-30 12:59:30,961 [INFO] meteora_bot: Posisi 5DVpWbYGXme7CXk7D8yguWm413jja66eLtZzory6Kbyv tidak terlihat lagi di wallet, ditandai closed.
