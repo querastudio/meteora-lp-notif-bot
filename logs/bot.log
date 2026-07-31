@@ -245,3 +245,6 @@
 2026-07-31 21:13:58,792 [INFO] meteora_bot: Posisi baru terdeteksi: EuVqWMrkzdpMHYMgvuZwbT5cNvL2kuXWKaf55nUY6UeD (hwg-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $145.9607
 2026-07-31 22:17:08,009 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-07-31 22:17:09,680 [INFO] meteora_bot: Posisi baru terdeteksi: GnFzodEpWUyR5pjAnaajHgEXbSyJUDj77MDmdkDgtSbm (MySpace-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $145.5038
+2026-07-31 23:27:08,436 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-07-31 23:27:11,216 [INFO] meteora_bot: Posisi GnFzodEpWUyR5pjAnaajHgEXbSyJUDj77MDmdkDgtSbm tidak terlihat lagi di wallet, ditandai closed.
+2026-07-31 23:27:11,517 [INFO] meteora_bot: Posisi baru terdeteksi: CPcXn9Ve4AHsK2sRjUapaVX9ZhY2JqqXY5vzAPDUt55L (Chiikawa-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $218.4822
