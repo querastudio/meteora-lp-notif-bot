@@ -226,3 +226,6 @@
 2026-07-31 02:39:09,824 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-07-31 04:45:16,133 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-07-31 04:45:18,038 [INFO] meteora_bot: Posisi baru terdeteksi: 7whATjVyiKsoDP1WdtyuqpNADVixmx7vULASPbSrYwE9 (CALLCAT-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $147.4997
+2026-07-31 07:39:40,204 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-07-31 07:39:41,541 [INFO] meteora_bot: Posisi 7whATjVyiKsoDP1WdtyuqpNADVixmx7vULASPbSrYwE9 tidak terlihat lagi di wallet, ditandai closed.
+2026-07-31 07:39:41,743 [INFO] meteora_bot: Posisi baru terdeteksi: DSfEgoJfHVt5FaQa9Ni73aJ6ma72yifuCjFpuwRgizxk (CALLCAT-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $147.5062
