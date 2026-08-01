@@ -261,3 +261,5 @@
 2026-08-01 07:10:31,782 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-01 07:10:32,650 [INFO] meteora_bot: Posisi EuVqWMrkzdpMHYMgvuZwbT5cNvL2kuXWKaf55nUY6UeD tidak terlihat lagi di wallet, ditandai closed.
 2026-08-01 07:10:33,476 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk CONTRA-SOL: terkirim
+2026-08-01 09:22:02,722 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-01 09:22:05,178 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk CATE-SOL: terkirim
