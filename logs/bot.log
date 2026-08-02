@@ -285,3 +285,7 @@
 2026-08-01 23:32:04,951 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-02 01:11:15,517 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-02 02:36:33,636 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-02 04:40:18,512 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-02 04:40:20,668 [INFO] meteora_bot: Posisi C16LAaoYETxZQDp9eNMHhs1AX4ofD5xdtqaKBU7RqKuj tidak terlihat lagi di wallet, ditandai closed.
+2026-08-02 04:40:20,857 [INFO] meteora_bot: Posisi baru terdeteksi: 9giZ2md3qheDKX5vbZDfd4STUEVLjtMud7xxaHdhPnm2 (CATE-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $219.7960
+2026-08-02 04:40:20,862 [INFO] meteora_bot: Posisi baru terdeteksi: HpcuHBkZEK7dRS6upSTvezGhUes2qg5bj5r4nyy1i9HP (JORDAN-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $146.5306
