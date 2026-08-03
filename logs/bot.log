@@ -332,3 +332,4 @@
 2026-08-03 11:57:00,927 [INFO] meteora_bot: Posisi baru terdeteksi: J5ifBXooerFUN1KPu3j9fuRw1n3RqAPogHaH316PvWqr (3place-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $216.9622
 2026-08-03 11:57:01,532 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk 3place-SOL: terkirim
 2026-08-03 14:57:30,262 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-03 17:15:03,917 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
