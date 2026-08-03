@@ -323,3 +323,6 @@
 2026-08-03 02:38:19,889 [INFO] meteora_bot: Posisi baru terdeteksi: 5A7bdLNxEQ3KUatvmgRVPMX5dqZtUzMtGqxQuUYN8W1N (CATE-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $218.9572
 2026-08-03 04:52:40,824 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-03 04:52:43,514 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk CATE-SOL: terkirim
+2026-08-03 08:25:21,518 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-03 08:25:22,883 [INFO] meteora_bot: Posisi HYSyRtsBMGz7e51j1ts2XGbrYTdLKgszzVm1bh4oLRmB tidak terlihat lagi di wallet, ditandai closed.
+2026-08-03 08:25:23,306 [INFO] meteora_bot: Posisi baru terdeteksi: 8rjszJAg8pB7FNU6JGPUKkvxWYQqUNpYCvZkK1NE2hDT (Shipy-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $217.0271
