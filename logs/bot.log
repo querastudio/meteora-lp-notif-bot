@@ -348,3 +348,4 @@
 2026-08-04 02:15:14,479 [INFO] meteora_bot: Posisi Gv6k3BDfwGMYkW67rPe3Yp3P7N1fHV66hNxmfA9bNwem tidak terlihat lagi di wallet, ditandai closed.
 2026-08-04 02:15:14,590 [INFO] meteora_bot: Posisi baru terdeteksi: 3su9S3xZaGUTZLYmvoB6gVXt7aD9FM1PXQffAgTmRAPo (Doom-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $221.1118
 2026-08-04 02:15:14,592 [INFO] meteora_bot: Posisi baru terdeteksi: 8dbXfZgCrCynriAs1ariAZRUsXWXDjuyiys938CNUdwc (NEEGY-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $221.1113
+2026-08-04 02:22:47,487 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
