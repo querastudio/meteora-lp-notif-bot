@@ -370,3 +370,5 @@
 2026-08-04 12:50:15,875 [INFO] meteora_bot: Posisi 9TSYQmVrgunAmzJDywUBRF42AYtzTQLcNehD8SpvAfHj tidak terlihat lagi di wallet, ditandai closed.
 2026-08-04 12:50:16,096 [INFO] meteora_bot: Posisi baru terdeteksi: DUsKfEuSHT9WNqZiDVh8chzCwKGkSELu73bQg9P714ao (NEEGY-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $221.3773
 2026-08-04 12:50:16,098 [INFO] meteora_bot: Posisi baru terdeteksi: GAkRSvCWFuGsXwrzWxtKmLHkTZZDGJiisdqRADjdsGrb (TikTok-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $221.3773
+2026-08-04 15:15:10,779 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-04 15:15:13,601 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk NEEGY-SOL: terkirim
