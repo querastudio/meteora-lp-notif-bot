@@ -360,3 +360,8 @@
 2026-08-04 08:03:33,201 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk HORSE-SOL: terkirim
 2026-08-04 08:03:33,202 [INFO] meteora_bot: Posisi baru terdeteksi: AJivPYmfTnxNMAjbkWwAFq7ZFCbzxdNXZCSMBjW4wGJB (TikTok-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $221.6352
 2026-08-04 08:03:33,204 [INFO] meteora_bot: Posisi baru terdeteksi: CmkgpnmE35druJqzBvx51JPpTH3AqmWEVfz7TyLLNrw6 (NEEGY-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $36.8085
+2026-08-04 10:48:17,621 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-04 10:48:19,183 [INFO] meteora_bot: Posisi AJivPYmfTnxNMAjbkWwAFq7ZFCbzxdNXZCSMBjW4wGJB tidak terlihat lagi di wallet, ditandai closed.
+2026-08-04 10:48:19,183 [INFO] meteora_bot: Posisi CmkgpnmE35druJqzBvx51JPpTH3AqmWEVfz7TyLLNrw6 tidak terlihat lagi di wallet, ditandai closed.
+2026-08-04 10:48:19,432 [INFO] meteora_bot: Posisi baru terdeteksi: 9TSYQmVrgunAmzJDywUBRF42AYtzTQLcNehD8SpvAfHj (BEAR-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $220.4518
+2026-08-04 10:48:20,183 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk OnlyMarms-SOL: terkirim
