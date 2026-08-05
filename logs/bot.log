@@ -389,3 +389,7 @@
 2026-08-05 07:20:00,291 [INFO] meteora_bot: Posisi J9GDpdwj5c5DD41MJC4hP7E6k1K5FwaA32hjmQPCJT4N tidak terlihat lagi di wallet, ditandai closed.
 2026-08-05 07:20:01,184 [INFO] meteora_bot: Posisi baru terdeteksi: 9DhNQw47V2YN7W6M6L8DiuB8UBvvUehzt9yRGDhYsKUV (JLY-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $221.2815
 2026-08-05 07:20:01,834 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk Chiikawa-SOL: terkirim
+2026-08-05 10:03:19,055 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-05 10:03:21,175 [INFO] meteora_bot: Posisi DUsKfEuSHT9WNqZiDVh8chzCwKGkSELu73bQg9P714ao tidak terlihat lagi di wallet, ditandai closed.
+2026-08-05 10:03:21,347 [INFO] meteora_bot: Posisi baru terdeteksi: 2MVuC6tU2WCyfTsFNTdeSsCY2wqP4fyz8xeKRnfbdKoy (SISYPUSS-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $221.8623
+2026-08-05 10:03:21,855 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk JLY-SOL: terkirim
