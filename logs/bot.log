@@ -403,3 +403,4 @@
 2026-08-05 17:59:23,757 [INFO] meteora_bot: Posisi 2MVuC6tU2WCyfTsFNTdeSsCY2wqP4fyz8xeKRnfbdKoy tidak terlihat lagi di wallet, ditandai closed.
 2026-08-05 17:59:24,487 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk KIO-SOL: terkirim
 2026-08-05 19:48:40,203 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-05 20:50:21,917 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
