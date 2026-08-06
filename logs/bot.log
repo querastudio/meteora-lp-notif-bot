@@ -413,3 +413,6 @@
 2026-08-06 03:44:33,618 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-06 06:17:53,471 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-06 06:17:55,681 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk KIO-SOL: terkirim
+2026-08-06 09:16:31,374 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-06 09:16:34,578 [INFO] meteora_bot: Posisi baru terdeteksi: A29EvDGavfZTMw96G56fZZ9G4xs4jQTAy99TA37uX5Fa (NEEGY-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $220.6011
+2026-08-06 09:16:34,580 [INFO] meteora_bot: Posisi baru terdeteksi: HJzA8hX6hVzJknDrKuhGR8oJB2BTRdikLktDypbMCXEn (Chiikawa-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $220.5997
