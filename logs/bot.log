@@ -421,3 +421,4 @@
 2026-08-06 11:36:57,973 [INFO] meteora_bot: Posisi baru terdeteksi: EGGFZJNX3eBdEnsM7YgwsBHpfnRghBmEnYxxBNRuU3Q6 (KIO-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $220.2416
 2026-08-06 13:18:44,449 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-06 13:18:48,496 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk NEEGY-SOL: terkirim
+2026-08-06 15:35:17,672 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
