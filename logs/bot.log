@@ -416,3 +416,6 @@
 2026-08-06 09:16:31,374 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-06 09:16:34,578 [INFO] meteora_bot: Posisi baru terdeteksi: A29EvDGavfZTMw96G56fZZ9G4xs4jQTAy99TA37uX5Fa (NEEGY-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $220.6011
 2026-08-06 09:16:34,580 [INFO] meteora_bot: Posisi baru terdeteksi: HJzA8hX6hVzJknDrKuhGR8oJB2BTRdikLktDypbMCXEn (Chiikawa-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $220.5997
+2026-08-06 11:36:54,218 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-06 11:36:57,769 [INFO] meteora_bot: Posisi 79LkWtR9S9u85qDVg9AKKGAcXtA59tmohwxQdZxtjyWB tidak terlihat lagi di wallet, ditandai closed.
+2026-08-06 11:36:57,973 [INFO] meteora_bot: Posisi baru terdeteksi: EGGFZJNX3eBdEnsM7YgwsBHpfnRghBmEnYxxBNRuU3Q6 (KIO-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $220.2416
