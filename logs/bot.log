@@ -411,3 +411,5 @@
 2026-08-06 02:25:13,104 [INFO] meteora_bot: Posisi 5PyjMRa1TXNygY6EFsB86RXjr73BnRbSBFfiyag25eyR tidak terlihat lagi di wallet, ditandai closed.
 2026-08-06 02:25:13,244 [INFO] meteora_bot: Posisi baru terdeteksi: 79LkWtR9S9u85qDVg9AKKGAcXtA59tmohwxQdZxtjyWB (KIO-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $220.0824
 2026-08-06 03:44:33,618 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-06 06:17:53,471 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-06 06:17:55,681 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk KIO-SOL: terkirim
