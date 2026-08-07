@@ -444,3 +444,5 @@
 2026-08-07 05:22:20,125 [INFO] meteora_bot: Posisi baru terdeteksi: CVKCtJ7VgkoeeycFik1QXs6RH5UjkoVC5N9zjdvYhEfS (LARP-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $217.7944
 2026-08-07 06:43:40,986 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-07 06:43:42,193 [INFO] meteora_bot: Posisi CVKCtJ7VgkoeeycFik1QXs6RH5UjkoVC5N9zjdvYhEfS tidak terlihat lagi di wallet, ditandai closed.
+2026-08-07 08:01:32,183 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-07 08:01:35,361 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk CATE-SOL: terkirim
