@@ -430,3 +430,5 @@
 2026-08-07 00:34:28,672 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk Cupsey-SOL: terkirim
 2026-08-07 00:34:28,673 [INFO] meteora_bot: Posisi baru terdeteksi: Hfeu4q4RWMi3iM66yhk8kxd5fQgAQ2tsKyxG8dDj4Jhz (CATE-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $217.9044
 2026-08-07 00:34:29,314 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk CATE-SOL: terkirim
+2026-08-07 02:34:04,513 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-07 02:34:06,306 [INFO] meteora_bot: Posisi burFpNZGeKEKsEmnNyTrMaXgR1UFjck5oHxkgiqgsVT tidak terlihat lagi di wallet, ditandai closed.
