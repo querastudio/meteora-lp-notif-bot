@@ -422,3 +422,11 @@
 2026-08-06 13:18:44,449 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-06 13:18:48,496 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk NEEGY-SOL: terkirim
 2026-08-06 15:35:17,672 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-07 00:34:24,834 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-07 00:34:27,838 [INFO] meteora_bot: Posisi A29EvDGavfZTMw96G56fZZ9G4xs4jQTAy99TA37uX5Fa tidak terlihat lagi di wallet, ditandai closed.
+2026-08-07 00:34:27,838 [INFO] meteora_bot: Posisi HJzA8hX6hVzJknDrKuhGR8oJB2BTRdikLktDypbMCXEn tidak terlihat lagi di wallet, ditandai closed.
+2026-08-07 00:34:27,838 [INFO] meteora_bot: Posisi EGGFZJNX3eBdEnsM7YgwsBHpfnRghBmEnYxxBNRuU3Q6 tidak terlihat lagi di wallet, ditandai closed.
+2026-08-07 00:34:27,996 [INFO] meteora_bot: Posisi baru terdeteksi: burFpNZGeKEKsEmnNyTrMaXgR1UFjck5oHxkgiqgsVT (Cupsey-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $217.9056
+2026-08-07 00:34:28,672 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk Cupsey-SOL: terkirim
+2026-08-07 00:34:28,673 [INFO] meteora_bot: Posisi baru terdeteksi: Hfeu4q4RWMi3iM66yhk8kxd5fQgAQ2tsKyxG8dDj4Jhz (CATE-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $217.9044
+2026-08-07 00:34:29,314 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk CATE-SOL: terkirim
