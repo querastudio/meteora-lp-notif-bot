@@ -486,3 +486,6 @@
 2026-08-08 03:55:29,529 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-08 03:55:32,059 [INFO] meteora_bot: Posisi BLiZKAzqFWfrLNXosswqBrFNWngniyFD3CKw5rB4DRUW tidak terlihat lagi di wallet, ditandai closed.
 2026-08-08 03:55:32,403 [INFO] meteora_bot: Posisi baru terdeteksi: A7iRdy1RFuzWDChHnfSd6cB45TADBx2Pjc2sKU1fipUx (Jimothy-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $224.0410
+2026-08-08 05:00:19,467 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-08 05:00:20,695 [INFO] meteora_bot: Posisi A7iRdy1RFuzWDChHnfSd6cB45TADBx2Pjc2sKU1fipUx tidak terlihat lagi di wallet, ditandai closed.
+2026-08-08 05:00:20,928 [INFO] meteora_bot: Posisi baru terdeteksi: 7XaMtrpa6uUxR9uj2rotmXF7mcsocWnKVsjpqm4KHB7a (Jimothy-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $223.7138
