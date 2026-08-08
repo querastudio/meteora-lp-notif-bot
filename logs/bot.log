@@ -483,3 +483,6 @@
 2026-08-08 02:33:36,522 [INFO] meteora_bot: Posisi Cf1jVfd5JV8wojMcVH78kinm3iYwC9PM7tB9qau3dZ2B tidak terlihat lagi di wallet, ditandai closed.
 2026-08-08 02:33:36,758 [INFO] meteora_bot: Posisi baru terdeteksi: BLiZKAzqFWfrLNXosswqBrFNWngniyFD3CKw5rB4DRUW (Frohorse-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $221.7383
 2026-08-08 02:33:36,760 [INFO] meteora_bot: Posisi baru terdeteksi: CBETJDpAZiJ1Sbc7FciiAoypEwMPiuhiUKvkaEDojSf1 (BUTTHOLE-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $221.7385
+2026-08-08 03:55:29,529 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-08 03:55:32,059 [INFO] meteora_bot: Posisi BLiZKAzqFWfrLNXosswqBrFNWngniyFD3CKw5rB4DRUW tidak terlihat lagi di wallet, ditandai closed.
+2026-08-08 03:55:32,403 [INFO] meteora_bot: Posisi baru terdeteksi: A7iRdy1RFuzWDChHnfSd6cB45TADBx2Pjc2sKU1fipUx (Jimothy-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $224.0410
