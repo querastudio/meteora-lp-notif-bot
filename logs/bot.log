@@ -489,3 +489,6 @@
 2026-08-08 05:00:19,467 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-08 05:00:20,695 [INFO] meteora_bot: Posisi A7iRdy1RFuzWDChHnfSd6cB45TADBx2Pjc2sKU1fipUx tidak terlihat lagi di wallet, ditandai closed.
 2026-08-08 05:00:20,928 [INFO] meteora_bot: Posisi baru terdeteksi: 7XaMtrpa6uUxR9uj2rotmXF7mcsocWnKVsjpqm4KHB7a (Jimothy-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $223.7138
+2026-08-08 05:51:48,445 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-08 05:51:50,853 [INFO] meteora_bot: Posisi baru terdeteksi: AKkPAFULuyamGAaqC3MRHdBQmkdAYxpMTJuRj8v2T4yx (RUBY-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $223.4897
+2026-08-08 05:51:51,585 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk BUTTHOLE-SOL: terkirim
