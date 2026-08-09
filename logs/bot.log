@@ -566,3 +566,7 @@
 2026-08-09 13:11:43,327 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-09 13:11:45,557 [INFO] meteora_bot: Posisi AryieCemy1Ua8doLhcNLQbpkAQjR5t835CXwsTSMYqYT tidak terlihat lagi di wallet, ditandai closed.
 2026-08-09 13:11:45,854 [INFO] meteora_bot: Posisi baru terdeteksi: BKobYbgrW14mbAJdbz5aXZpJPgQbdgT8K5p6qPJSfQ89 (Bark-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $229.5689
+2026-08-09 14:00:36,084 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-09 14:00:41,709 [INFO] meteora_bot: Posisi BKobYbgrW14mbAJdbz5aXZpJPgQbdgT8K5p6qPJSfQ89 tidak terlihat lagi di wallet, ditandai closed.
+2026-08-09 14:00:41,986 [INFO] meteora_bot: Posisi baru terdeteksi: 6fvsjMCRnx2AojhVqgqKvGoNAPsN71GsHj7arBnSRWTK (Bark-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $229.6179
+2026-08-09 14:00:41,989 [INFO] meteora_bot: Posisi baru terdeteksi: 9gZwM4rtmeyK9uBo87VvuN9kvJ29fhwzJRjcp3FcHKUV (Bark-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $229.6179
