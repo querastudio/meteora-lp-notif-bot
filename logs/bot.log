@@ -560,3 +560,6 @@
 2026-08-09 11:38:28,263 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-09 11:38:31,090 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk TOAD-SOL: terkirim
 2026-08-09 11:38:31,092 [INFO] meteora_bot: Posisi baru terdeteksi: 5CsaTs6DGZc8eCfPx7X8yWH5JoYsMdsyRuSD5P89ndBC (Bark-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $229.3052
+2026-08-09 12:02:35,822 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-09 12:02:38,974 [INFO] meteora_bot: Posisi 5CsaTs6DGZc8eCfPx7X8yWH5JoYsMdsyRuSD5P89ndBC tidak terlihat lagi di wallet, ditandai closed.
+2026-08-09 12:02:39,374 [INFO] meteora_bot: Posisi baru terdeteksi: AryieCemy1Ua8doLhcNLQbpkAQjR5t835CXwsTSMYqYT (Bark-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $229.1829
