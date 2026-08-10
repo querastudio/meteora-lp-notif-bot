@@ -609,3 +609,6 @@
 2026-08-10 12:35:13,107 [INFO] meteora_bot: Posisi baru terdeteksi: 6pi2NET48rwoUC5YFyWmh2TgjQ2skyv6ibUYYCQJkM8m (TOAD-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $76.7355
 2026-08-10 12:35:13,109 [INFO] meteora_bot: Posisi baru terdeteksi: GUDHQhi5RCgaFvR4GRPE8pUuzrN5cPQRgy1RckR9K43D (TOAD-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $38.3668
 2026-08-10 14:04:12,484 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-10 15:13:21,006 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-10 15:13:22,287 [INFO] meteora_bot: Posisi 6pi2NET48rwoUC5YFyWmh2TgjQ2skyv6ibUYYCQJkM8m tidak terlihat lagi di wallet, ditandai closed.
+2026-08-10 15:13:22,287 [INFO] meteora_bot: Posisi GUDHQhi5RCgaFvR4GRPE8pUuzrN5cPQRgy1RckR9K43D tidak terlihat lagi di wallet, ditandai closed.
