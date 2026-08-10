@@ -612,3 +612,5 @@
 2026-08-10 15:13:21,006 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-10 15:13:22,287 [INFO] meteora_bot: Posisi 6pi2NET48rwoUC5YFyWmh2TgjQ2skyv6ibUYYCQJkM8m tidak terlihat lagi di wallet, ditandai closed.
 2026-08-10 15:13:22,287 [INFO] meteora_bot: Posisi GUDHQhi5RCgaFvR4GRPE8pUuzrN5cPQRgy1RckR9K43D tidak terlihat lagi di wallet, ditandai closed.
+2026-08-10 16:11:08,532 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-10 16:11:13,053 [INFO] meteora_bot: Posisi baru terdeteksi: GioRaFn6qN5qruLAHfkR1XhQY2fRwPKjGfFCuyiXLNf6 (Remus-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $227.6322
