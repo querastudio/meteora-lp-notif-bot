@@ -636,3 +636,5 @@
 2026-08-11 04:38:58,061 [INFO] meteora_bot: Posisi 41gXocKR7wowGr3zfaztPkijmY85ozkXEYVgcvSJs1tb tidak terlihat lagi di wallet, ditandai closed.
 2026-08-11 04:38:58,774 [INFO] meteora_bot: Posisi baru terdeteksi: 8PzrNoH2zPofuvHKEYiDN56HjUkS1f4HdzEc6T2GrpBo (nosis-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $228.7571
 2026-08-11 04:38:59,513 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk TOAD-SOL: terkirim
+2026-08-11 05:41:44,995 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-11 05:41:46,787 [INFO] meteora_bot: Posisi 8PzrNoH2zPofuvHKEYiDN56HjUkS1f4HdzEc6T2GrpBo tidak terlihat lagi di wallet, ditandai closed.
