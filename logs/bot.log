@@ -649,3 +649,4 @@
 2026-08-11 10:06:33,021 [INFO] meteora_bot: Posisi baru terdeteksi: 3XVA2Rkc44DXiankrwN3rcNi6Q7jiruEeh6HeaYp77Wf (MOMO-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $231.3673
 2026-08-11 11:03:16,452 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-11 11:03:18,244 [INFO] meteora_bot: Posisi 3XVA2Rkc44DXiankrwN3rcNi6Q7jiruEeh6HeaYp77Wf tidak terlihat lagi di wallet, ditandai closed.
+2026-08-11 11:52:54,550 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
