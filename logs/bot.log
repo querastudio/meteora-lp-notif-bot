@@ -672,3 +672,6 @@
 2026-08-11 23:04:36,339 [INFO] meteora_bot: Posisi 2gMdm6CXMDGPd5D27FtnNdTPDFkC4S3TTXnT34jFPZ9o tidak terlihat lagi di wallet, ditandai closed.
 2026-08-11 23:04:36,339 [INFO] meteora_bot: Posisi 6YWZh2pq17gZBrHgG26FENZZMP94u5cyZxPDMj13G3YF tidak terlihat lagi di wallet, ditandai closed.
 2026-08-11 23:04:36,614 [INFO] meteora_bot: Posisi baru terdeteksi: ztMEYtTMH9kC9KdKZppaWeoKFAe7VgYbF3b9FckRPzA (MARIO64-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $228.5561
+2026-08-11 23:55:41,224 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-11 23:55:45,175 [INFO] meteora_bot: Posisi baru terdeteksi: B2rxpQzP2snhtbx3CFBjTaWd1BS2sXq8XgjzzQqxmoPC (Plumber-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $228.4565
+2026-08-11 23:55:45,832 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk nosis-SOL: terkirim
