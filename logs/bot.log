@@ -640,3 +640,4 @@
 2026-08-11 05:41:46,787 [INFO] meteora_bot: Posisi 8PzrNoH2zPofuvHKEYiDN56HjUkS1f4HdzEc6T2GrpBo tidak terlihat lagi di wallet, ditandai closed.
 2026-08-11 06:38:17,761 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-11 06:38:19,953 [INFO] meteora_bot: Posisi baru terdeteksi: BzhkHbgxrvgxRaYGs4MFw3A4o9zBeKRS2jagfUPXD5xj (MANLET-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $227.3173
+2026-08-11 07:54:56,149 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
