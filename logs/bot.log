@@ -687,3 +687,6 @@
 2026-08-12 05:50:51,942 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk nosis-SOL: terkirim
 2026-08-12 07:09:18,609 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-12 08:39:32,627 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-12 09:47:11,603 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-12 09:47:13,204 [INFO] meteora_bot: Posisi 3MqPYqTzPJ3RXLeTBAKYBTQB9dnU915B1LXBvzWVPscg tidak terlihat lagi di wallet, ditandai closed.
+2026-08-12 09:47:13,726 [INFO] meteora_bot: Posisi baru terdeteksi: 4X6CLj4PHHFm5iYPHtTt7imexFgCVvcpUhj91swxt4Rt (nosis-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $230.0569
