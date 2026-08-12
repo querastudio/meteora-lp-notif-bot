@@ -694,3 +694,4 @@
 2026-08-12 10:45:38,782 [INFO] meteora_bot: Posisi 8pmN3pua4Qz9d9wBrVt3hicnGQnc8pSGicaKzHJ6yRW tidak terlihat lagi di wallet, ditandai closed.
 2026-08-12 10:45:38,782 [INFO] meteora_bot: Posisi 4X6CLj4PHHFm5iYPHtTt7imexFgCVvcpUhj91swxt4Rt tidak terlihat lagi di wallet, ditandai closed.
 2026-08-12 10:45:39,054 [INFO] meteora_bot: Posisi baru terdeteksi: 7aRMjy21GBjALGv91hcUSmm1BH2gQtdNhcLyMX16ZffN (apes-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $232.3809
+2026-08-12 11:34:58,384 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
