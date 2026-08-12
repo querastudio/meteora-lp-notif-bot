@@ -705,3 +705,5 @@
 2026-08-12 15:09:45,815 [INFO] meteora_bot: Posisi baru terdeteksi: 28eBnXaW7Lkim4PHvyUaeXL28gL1rcaka4WG1Stwoyxc (STONK-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $226.6736
 2026-08-12 16:09:25,898 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-12 17:12:19,112 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-12 18:09:02,893 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-12 18:09:05,539 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk STONK-SOL: terkirim
