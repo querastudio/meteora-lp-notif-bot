@@ -709,3 +709,5 @@
 2026-08-12 18:09:05,539 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk STONK-SOL: terkirim
 2026-08-12 19:22:30,571 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-12 20:08:50,458 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-12 21:03:09,138 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-12 21:03:10,081 [INFO] meteora_bot: Posisi ztMEYtTMH9kC9KdKZppaWeoKFAe7VgYbF3b9FckRPzA tidak terlihat lagi di wallet, ditandai closed.
