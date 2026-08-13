@@ -729,3 +729,7 @@
 2026-08-13 10:41:29,857 [INFO] meteora_bot: Posisi baru terdeteksi: 3vWmo5mHAuHKtrkzxurktHwYKXHLanXkUjytJPj8hmGp (STONK-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $151.2259
 2026-08-13 11:32:13,649 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-13 11:32:15,472 [INFO] meteora_bot: Posisi baru terdeteksi: 2ieZwsWbgSUs1CoEgs1SVPSnmyxAgUYip7boF2DAszkH (lickingcat-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $150.9914
+2026-08-13 12:29:25,057 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-13 12:29:26,808 [INFO] meteora_bot: Posisi 3fJWL6MGWrvCv7UeeLS23tBdmrka31MWGBqW5HiYCULK tidak terlihat lagi di wallet, ditandai closed.
+2026-08-13 12:29:28,044 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk Momota-SOL: terkirim
+2026-08-13 12:29:28,047 [INFO] meteora_bot: Posisi baru terdeteksi: Cn2Gh5btASuewHRnRQvBWqEddgVLFbf4eN7yJauBzQTH (MANLET-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $75.7737
