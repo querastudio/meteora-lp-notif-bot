@@ -757,3 +757,6 @@
 2026-08-14 03:13:57,119 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk Momota-SOL: terkirim
 2026-08-14 05:08:52,646 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-14 06:42:13,995 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-14 08:03:00,969 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-14 08:03:02,409 [INFO] meteora_bot: Posisi 3vWmo5mHAuHKtrkzxurktHwYKXHLanXkUjytJPj8hmGp tidak terlihat lagi di wallet, ditandai closed.
+2026-08-14 08:03:02,409 [INFO] meteora_bot: Posisi Cn2Gh5btASuewHRnRQvBWqEddgVLFbf4eN7yJauBzQTH tidak terlihat lagi di wallet, ditandai closed.
