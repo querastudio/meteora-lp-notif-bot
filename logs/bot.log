@@ -751,3 +751,4 @@
 2026-08-13 23:31:26,844 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-13 23:31:30,271 [INFO] meteora_bot: Posisi 6SVxjMTBX33s6jq9eugDB97PuLRTkAcqDDyy3U4QoTm tidak terlihat lagi di wallet, ditandai closed.
 2026-08-13 23:31:31,050 [INFO] meteora_bot: Posisi baru terdeteksi: HV4ZH5Cb5q61N7V3bcyAryBMAAUV2d6fQ97TKDgf7jjv (Momota-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $152.3028
+2026-08-14 00:41:24,161 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
