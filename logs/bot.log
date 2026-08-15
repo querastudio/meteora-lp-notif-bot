@@ -827,3 +827,4 @@
 2026-08-15 18:37:31,076 [INFO] meteora_bot: Posisi baru terdeteksi: 7CtPhvcntonqpDsGvqyaQuXa9GvWuj3KRfiYqLBhtFL (LOOKSMAX-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $150.9330
 2026-08-15 18:37:31,079 [INFO] meteora_bot: Posisi baru terdeteksi: EF4WDrNz1pR94bCyCbmahpRV4bjC8Qb5KrcFxAdcQjRQ (WOFL-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $150.9330
 2026-08-15 19:01:49,682 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-15 19:30:04,553 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
