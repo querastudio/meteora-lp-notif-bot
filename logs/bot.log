@@ -836,3 +836,4 @@
 2026-08-15 20:08:02,145 [INFO] meteora_bot: Posisi baru terdeteksi: 8LD2Xq9nRQnRv23P7gc6CGkRFC4hUN1x59okWH7jamCH (GUNICORN-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $152.3936
 2026-08-15 20:37:53,996 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-15 20:37:55,418 [INFO] meteora_bot: Posisi 8LD2Xq9nRQnRv23P7gc6CGkRFC4hUN1x59okWH7jamCH tidak terlihat lagi di wallet, ditandai closed.
+2026-08-15 20:58:42,432 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
