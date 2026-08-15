@@ -829,3 +829,8 @@
 2026-08-15 19:01:49,682 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-15 19:30:04,553 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-15 19:49:23,687 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-15 20:07:55,616 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-15 20:08:01,886 [INFO] meteora_bot: Posisi 7CtPhvcntonqpDsGvqyaQuXa9GvWuj3KRfiYqLBhtFL tidak terlihat lagi di wallet, ditandai closed.
+2026-08-15 20:08:01,886 [INFO] meteora_bot: Posisi EF4WDrNz1pR94bCyCbmahpRV4bjC8Qb5KrcFxAdcQjRQ tidak terlihat lagi di wallet, ditandai closed.
+2026-08-15 20:08:02,142 [INFO] meteora_bot: Posisi baru terdeteksi: cvgThamgGBcKpfSejpEUcJZSTVz6izg3wzpE1Br6H4Z (Momota-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $150.8815
+2026-08-15 20:08:02,145 [INFO] meteora_bot: Posisi baru terdeteksi: 8LD2Xq9nRQnRv23P7gc6CGkRFC4hUN1x59okWH7jamCH (GUNICORN-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $152.3936
