@@ -903,3 +903,4 @@
 2026-08-16 21:48:51,622 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-16 21:48:55,031 [INFO] meteora_bot: Posisi He19Ys4gDJFjs37oBY9VJTAjRr9ycZdGHKyNyL8zqrUD tidak terlihat lagi di wallet, ditandai closed.
 2026-08-16 21:48:55,581 [INFO] meteora_bot: Posisi baru terdeteksi: FJLwbZ2ca7YGK3Eh9x5D8eXC3qhy6AJaEuu4CzWSL2hd (LAYOOO-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $148.6537
+2026-08-16 22:02:09,101 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
