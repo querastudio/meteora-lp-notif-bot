@@ -866,3 +866,4 @@
 2026-08-16 09:43:25,575 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-16 09:43:27,065 [INFO] meteora_bot: Posisi ALrUfzTCofjyK63ZPKEuxM8ynmZReSqoT9e8saenjweL tidak terlihat lagi di wallet, ditandai closed.
 2026-08-16 09:43:27,265 [INFO] meteora_bot: Posisi baru terdeteksi: DnmRDBomL2UFWHUBk2mJsT1MKvkbCvChSEr28n9mBuXM (WOFL-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $150.4403
+2026-08-16 10:01:45,485 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
