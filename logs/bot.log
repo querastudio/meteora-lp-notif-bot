@@ -906,3 +906,5 @@
 2026-08-16 22:02:09,101 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-16 22:32:44,391 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-16 22:34:14,460 [ERROR] meteora_bot: Gagal membaca posisi wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT: Timeout saat membaca posisi dari RPC Solana.
+2026-08-16 22:53:33,675 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-16 22:55:03,697 [ERROR] meteora_bot: Gagal membaca posisi wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT: Timeout saat membaca posisi dari RPC Solana.
