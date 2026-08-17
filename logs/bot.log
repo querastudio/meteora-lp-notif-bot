@@ -935,3 +935,6 @@
 2026-08-17 09:08:28,905 [INFO] meteora_bot: Wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT pulih setelah 3 kegagalan berturut-turut.
 2026-08-17 09:08:30,076 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk LAYOOO-SOL: terkirim
 2026-08-17 09:56:53,862 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-17 10:38:38,080 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-17 10:38:46,324 [INFO] meteora_bot: Posisi baru terdeteksi: vzeioJYWsQ8Q9MKMAmirNGU68H64T8d8zekN3Fk2NUy (BILLY-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $151.0705
+2026-08-17 10:38:46,327 [INFO] meteora_bot: Posisi baru terdeteksi: CVcDtT7cfbGDcDQWn2NBm2Yyvt69J2Yu2FbXzGbSovz6 (MOMO-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $151.0784
