@@ -1015,3 +1015,5 @@
 2026-08-18 11:43:45,166 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-18 12:14:25,076 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-18 12:15:55,170 [ERROR] meteora_bot: Gagal membaca posisi wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT: Timeout saat membaca posisi dari RPC Solana.
+2026-08-18 13:12:53,112 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-18 13:12:55,331 [INFO] meteora_bot: Posisi baru terdeteksi: EX6jTNDWjLkEghxQiTb6H1712duGYtNTF3qzHriXka6T (67coin-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $228.6716
