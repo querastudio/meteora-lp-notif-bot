@@ -997,3 +997,9 @@
 2026-08-18 05:59:54,592 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-18 06:59:05,057 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-18 07:00:35,138 [ERROR] meteora_bot: Gagal membaca posisi wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT: Timeout saat membaca posisi dari RPC Solana.
+2026-08-18 07:47:55,914 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-18 07:47:58,429 [INFO] meteora_bot: Posisi 587d9cX2kokPPvTLRzJtZj61PorrQJ2P17mK1ddRYBfP tidak terlihat lagi di wallet, ditandai closed.
+2026-08-18 07:47:58,429 [INFO] meteora_bot: Posisi 2LwScjJgCyHC91sBXBmdL2R2HHretkboq1dn4My6nsjv tidak terlihat lagi di wallet, ditandai closed.
+2026-08-18 07:47:58,429 [INFO] meteora_bot: Posisi 6jyQwnhePNiGjnpRcTiYYxPDZaSMgdquXmToNSgqEYCa tidak terlihat lagi di wallet, ditandai closed.
+2026-08-18 07:47:58,839 [INFO] meteora_bot: Posisi baru terdeteksi: AaPh9wmJBXkTQomGnfWnpXmB8k6kx9eCjHWB4F47rCsq (Qenis-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $151.9296
+2026-08-18 07:47:58,842 [INFO] meteora_bot: Posisi baru terdeteksi: J8eCQg17QRjcHHXmCBY8FQFmYMhj5xe3DZ5zdTsLbVPd (MEOW-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $151.9295
