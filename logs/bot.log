@@ -1011,3 +1011,4 @@
 2026-08-18 10:11:00,646 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk Qenis-SOL: terkirim
 2026-08-18 10:47:59,772 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-18 10:49:29,842 [ERROR] meteora_bot: Gagal membaca posisi wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT: Timeout saat membaca posisi dari RPC Solana.
+2026-08-18 11:12:32,236 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
