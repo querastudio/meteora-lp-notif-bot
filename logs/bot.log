@@ -1086,3 +1086,7 @@
 2026-08-19 13:05:34,034 [INFO] meteora_bot: Posisi baru terdeteksi: 7F5fNLumNLn1CL3U789gHaJX18A2HYg4stKzy21Z6YGg (BULLSHIT-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $156.3383
 2026-08-19 13:05:34,036 [INFO] meteora_bot: Posisi baru terdeteksi: 7L5Wn4qiDrzdjUn7ou9Uc4hwdjqhEcoPCSkHuZ3LPyNM (Intismeran-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $156.4937
 2026-08-19 13:05:34,039 [INFO] meteora_bot: Posisi baru terdeteksi: G5av11f17tmbbfp5ww54GxdnGmEumhaRkQqSwJU1EhBv (omo-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $156.3369
+2026-08-19 13:55:19,756 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-19 13:55:21,306 [INFO] meteora_bot: Posisi 7L5Wn4qiDrzdjUn7ou9Uc4hwdjqhEcoPCSkHuZ3LPyNM tidak terlihat lagi di wallet, ditandai closed.
+2026-08-19 13:55:22,230 [INFO] meteora_bot: Notifikasi [floor_touch] untuk MOMO-SOL: terkirim
+2026-08-19 13:55:22,232 [INFO] meteora_bot: Posisi baru terdeteksi: AhixTFLkXHeMqYKi87whaxw9keWHYFmJ8oRX4ePELfJd (Intismeran-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $156.7589
