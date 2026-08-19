@@ -1097,3 +1097,4 @@
 2026-08-19 15:06:12,858 [INFO] meteora_bot: Posisi 7F5fNLumNLn1CL3U789gHaJX18A2HYg4stKzy21Z6YGg tidak terlihat lagi di wallet, ditandai closed.
 2026-08-19 15:06:14,353 [INFO] meteora_bot: Notifikasi [floor_lock] untuk omo-SOL: terkirim
 2026-08-19 15:06:15,091 [INFO] meteora_bot: Notifikasi [floor_lock] untuk OnlyMarms-SOL: terkirim
+2026-08-19 15:44:09,957 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
