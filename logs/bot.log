@@ -1069,3 +1069,4 @@
 2026-08-19 08:19:45,444 [INFO] meteora_bot: Posisi 6CenyberfKK8bgmZKfWBbxJYUFqZTYpZxciGbj3yKKcC tidak terlihat lagi di wallet, ditandai closed.
 2026-08-19 08:19:46,852 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk omo-SOL: terkirim
 2026-08-19 08:19:46,856 [INFO] meteora_bot: Posisi baru terdeteksi: 3jVGgji7G1u9MJgxJ82FczCME2WcpfEvmqJ7BEGXrWVF (BULLSHIT-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $154.0365
+2026-08-19 09:01:00,145 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
