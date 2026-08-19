@@ -1053,3 +1053,5 @@
 2026-08-19 02:43:57,959 [INFO] meteora_bot: Posisi AaPh9wmJBXkTQomGnfWnpXmB8k6kx9eCjHWB4F47rCsq tidak terlihat lagi di wallet, ditandai closed.
 2026-08-19 02:43:58,580 [INFO] meteora_bot: Posisi baru terdeteksi: J6m2kctobBDFUTJANzS2ArETQ9kSLHjVmQ3wi5XhWaHt (CLUG-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $154.0883
 2026-08-19 03:32:54,346 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-19 04:19:06,062 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-19 04:19:07,108 [INFO] meteora_bot: Posisi J6m2kctobBDFUTJANzS2ArETQ9kSLHjVmQ3wi5XhWaHt tidak terlihat lagi di wallet, ditandai closed.
