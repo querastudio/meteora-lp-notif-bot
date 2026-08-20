@@ -1142,3 +1142,5 @@
 2026-08-20 09:06:18,659 [INFO] meteora_bot: Posisi HMwWo1KSYGNnk4FhvY3rRhH9yhWDCAi24BmbjK6fxhxs tidak terlihat lagi di wallet, ditandai closed.
 2026-08-20 09:06:18,938 [INFO] meteora_bot: Posisi baru terdeteksi: AdGrotuBQAuTmpgaUMxZ6iXAFxJ77CMfzsrxr3HfGZFt (MADE-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $349.6004
 2026-08-20 09:06:18,940 [INFO] meteora_bot: Posisi baru terdeteksi: Edzg1Ud7tmE2xWxgyo5STwGjUeieLsZ2MgcLjUpFQoo7 (BULLSHIT-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $104.8804
+2026-08-20 09:48:47,151 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-20 09:48:48,205 [INFO] meteora_bot: Posisi AdGrotuBQAuTmpgaUMxZ6iXAFxJ77CMfzsrxr3HfGZFt tidak terlihat lagi di wallet, ditandai closed.
