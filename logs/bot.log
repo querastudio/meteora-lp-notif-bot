@@ -1152,3 +1152,4 @@
 2026-08-20 11:49:41,627 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk BULLSHIT-SOL: terkirim
 2026-08-20 12:20:40,107 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-20 12:20:41,319 [INFO] meteora_bot: Posisi 3yuCDjDfQYJQvJExXexigSBQfNVmQeMqW5PihZpxgwPb tidak terlihat lagi di wallet, ditandai closed.
+2026-08-20 13:25:23,126 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
