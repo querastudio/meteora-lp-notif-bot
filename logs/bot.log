@@ -1181,3 +1181,6 @@
 2026-08-21 03:56:24,811 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-21 04:45:20,210 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-21 04:45:27,656 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk CATE-SOL: terkirim
+2026-08-21 05:18:51,737 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-21 05:18:54,164 [INFO] meteora_bot: Notifikasi [floor_lock] untuk Qenis-SOL: terkirim
+2026-08-21 05:18:54,836 [INFO] meteora_bot: Notifikasi [floor_lock] untuk BULLSHIT-SOL: terkirim
