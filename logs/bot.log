@@ -1216,3 +1216,6 @@
 2026-08-21 13:17:54,569 [INFO] meteora_bot: Posisi baru terdeteksi: CmUh7Htx2DCBEX4kZ1ohCJYNJEoq3Hg22Z7X5JQ1y7gT (omo-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $180.9843
 2026-08-21 14:03:12,511 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-21 14:03:15,688 [INFO] meteora_bot: Posisi baru terdeteksi: 56rSVh9wtRABqCBxUidtrczkFQ9JRpVE9RkrrUGu5TGh (KIRK-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $272.4394
+2026-08-21 14:49:40,980 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-21 14:49:42,318 [INFO] meteora_bot: Posisi 56rSVh9wtRABqCBxUidtrczkFQ9JRpVE9RkrrUGu5TGh tidak terlihat lagi di wallet, ditandai closed.
+2026-08-21 14:49:43,499 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk App-SOL: terkirim
