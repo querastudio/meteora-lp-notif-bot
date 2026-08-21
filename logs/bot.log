@@ -1221,3 +1221,6 @@
 2026-08-21 14:49:43,499 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk App-SOL: terkirim
 2026-08-21 15:21:26,452 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-21 15:21:33,466 [INFO] meteora_bot: Posisi baru terdeteksi: 7ABBgWFVsWY6r7iMrMpMWSWPadomVb13bBL1agW7UDCq (PANTS-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $274.8112
+2026-08-21 15:56:42,171 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-21 15:56:43,203 [INFO] meteora_bot: Posisi 7ABBgWFVsWY6r7iMrMpMWSWPadomVb13bBL1agW7UDCq tidak terlihat lagi di wallet, ditandai closed.
+2026-08-21 15:56:44,707 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk omo-SOL: terkirim
