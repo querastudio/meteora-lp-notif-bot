@@ -1203,3 +1203,8 @@
 2026-08-21 10:14:49,757 [INFO] meteora_bot: Notifikasi [floor_touch] untuk OnlyMarms-SOL: terkirim
 2026-08-21 10:51:51,466 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-21 11:19:29,603 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-21 11:48:40,027 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-21 11:48:44,788 [INFO] meteora_bot: Posisi 7Px5ynuf6xKFG8ByXKipdYWmBw627LcdfZSuFKwgbK9c tidak terlihat lagi di wallet, ditandai closed.
+2026-08-21 11:48:44,788 [INFO] meteora_bot: Posisi CSNGcQ4JgtBt2UzEnw7iJQY25EpYcZ2NAe7JEV2CYe8H tidak terlihat lagi di wallet, ditandai closed.
+2026-08-21 11:48:45,579 [INFO] meteora_bot: Posisi baru terdeteksi: 4pRDrBNVg5ActxDu244z7bxLiiQe3WHvrMnwWWzXaFnV (App-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $180.4023
+2026-08-21 11:48:45,587 [INFO] meteora_bot: Posisi baru terdeteksi: 9Y9mJUhmqauSWUuEZSPPY5uNMadiVtbwrXw9JsB4ajyt (CATE-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $180.4014
