@@ -1304,3 +1304,5 @@
 2026-08-22 13:41:50,937 [INFO] meteora_bot: Posisi baru terdeteksi: FVnkLcvnyG3KS5YQ1KSLHYn1hyMWrndwAudndbwvtmfD (MADE-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $187.3451
 2026-08-22 14:00:21,488 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-22 14:00:26,144 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk Doge2-SOL: terkirim
+2026-08-22 14:31:49,255 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-22 14:31:53,522 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk CATE-SOL: terkirim
