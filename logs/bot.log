@@ -1326,3 +1326,5 @@
 2026-08-22 18:13:31,783 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-22 18:51:35,740 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-22 18:51:40,563 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk PANTS-SOL: terkirim
+2026-08-22 19:17:30,212 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-22 19:17:32,201 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk App-SOL: terkirim
