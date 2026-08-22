@@ -1342,3 +1342,5 @@
 2026-08-22 22:35:05,825 [INFO] meteora_bot: Posisi CDhkMDVYSSnHm2mYXhLzU2p6Q2Dus9JuVh1iWC3EDbnY tidak terlihat lagi di wallet, ditandai closed.
 2026-08-22 22:35:06,490 [INFO] meteora_bot: Posisi baru terdeteksi: 9dLDkJUFagEc7RbM7v5VTBy74ga9PEJxfwz7gtiP2xcn (catalyst-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $187.5581
 2026-08-22 22:35:06,492 [INFO] meteora_bot: Posisi baru terdeteksi: CKuLfLCY7LdW6ANKE9uCyfEK1dPzgvm494QJWqgaKUma (omo-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $187.5575
+2026-08-22 22:56:10,405 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-22 22:56:14,112 [INFO] meteora_bot: Posisi 9dLDkJUFagEc7RbM7v5VTBy74ga9PEJxfwz7gtiP2xcn tidak terlihat lagi di wallet, ditandai closed.
