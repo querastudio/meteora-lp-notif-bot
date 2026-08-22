@@ -1249,3 +1249,5 @@
 2026-08-22 02:29:17,287 [INFO] meteora_bot: Posisi CmUh7Htx2DCBEX4kZ1ohCJYNJEoq3Hg22Z7X5JQ1y7gT tidak terlihat lagi di wallet, ditandai closed.
 2026-08-22 02:29:18,477 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk PANTS-SOL: terkirim
 2026-08-22 02:29:18,478 [INFO] meteora_bot: Posisi baru terdeteksi: GtLRQgk21T8g2KjAubtCSScKHYVUdEXySrzosVB5Lahu (CONK-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $284.9160
+2026-08-22 03:22:46,434 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-22 03:22:52,337 [INFO] meteora_bot: Notifikasi [floor_lock] untuk YOTS-SOL: terkirim
