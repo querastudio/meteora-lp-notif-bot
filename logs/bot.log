@@ -1412,3 +1412,5 @@
 2026-08-23 21:52:47,196 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-23 22:17:24,913 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-23 22:17:27,857 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk LOOKSMAX-SOL: terkirim
+2026-08-23 22:43:01,811 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-23 22:43:05,836 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk BULLSHIT-SOL: terkirim
