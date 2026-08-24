@@ -1455,3 +1455,6 @@
 2026-08-24 14:13:08,631 [INFO] meteora_bot: Notifikasi [floor_touch] untuk Ftat..HbJi-SOL: terkirim
 2026-08-24 15:03:13,823 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-24 15:51:56,008 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-24 16:28:08,160 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-24 16:28:09,972 [INFO] meteora_bot: Notifikasi [floor_lock] untuk Morty-SOL: terkirim
+2026-08-24 16:28:10,510 [INFO] meteora_bot: Notifikasi [floor_lock] untuk MADE-SOL: terkirim
