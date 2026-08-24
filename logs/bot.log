@@ -1436,3 +1436,7 @@
 2026-08-24 05:55:37,344 [INFO] meteora_bot: Posisi X7uHmiuYsVpzEJVqTHz2YFkksNp2XHQTZK9ynRsX4ST tidak terlihat lagi di wallet, ditandai closed.
 2026-08-24 07:04:33,145 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-24 07:04:34,997 [INFO] meteora_bot: Notifikasi [idle_timeout] untuk Morty-SOL: terkirim
+2026-08-24 08:03:06,457 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-24 08:03:12,124 [INFO] meteora_bot: Posisi FVbNXmsNt6rFMxex5B1FMUXA3xkP4mJmgNuVzjijYpqZ tidak terlihat lagi di wallet, ditandai closed.
+2026-08-24 08:03:12,339 [INFO] meteora_bot: Posisi baru terdeteksi: 5SVqfwvm99BZhA8L1cSwhsTabAgfAm2LSvMq6xbSfKq2 (LOOKSMAX-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $103.3929
+2026-08-24 08:03:12,343 [INFO] meteora_bot: Posisi baru terdeteksi: Fg118jZp7xnZM9ecjwyt5kcL5hzJZmSssUcqVCVddM5R (MADE-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $187.9875
