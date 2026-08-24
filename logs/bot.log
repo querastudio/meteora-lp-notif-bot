@@ -1476,3 +1476,5 @@
 2026-08-24 22:11:11,103 [INFO] meteora_bot: Notifikasi [floor_lock] untuk 46vV..pump-SOL: terkirim
 2026-08-24 22:46:05,828 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-24 22:46:08,705 [INFO] meteora_bot: Notifikasi [trailing_stop] untuk Dinger-SOL: terkirim
+2026-08-24 23:10:12,784 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-24 23:10:13,553 [INFO] meteora_bot: Posisi 3vZNvCKeF7Tc1Pz1a8DXJGtXXpiYw2Av5esBSMqKoXfQ tidak terlihat lagi di wallet, ditandai closed.
