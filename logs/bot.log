@@ -1488,3 +1488,4 @@
 2026-08-25 02:44:50,021 [INFO] meteora_bot: Posisi Fg118jZp7xnZM9ecjwyt5kcL5hzJZmSssUcqVCVddM5R tidak terlihat lagi di wallet, ditandai closed.
 2026-08-25 02:44:50,021 [INFO] meteora_bot: Posisi BS6NWzbAc7pTLm8ZXyqN52wTNtQUiMqfDYgfBp16qFDp tidak terlihat lagi di wallet, ditandai closed.
 2026-08-25 02:44:50,022 [INFO] meteora_bot: Posisi 9qeozXgZd3R7MxQKkaa8Es29XWtzkDoWgE3cjS5C12VE tidak terlihat lagi di wallet, ditandai closed.
+2026-08-25 03:35:05,712 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
