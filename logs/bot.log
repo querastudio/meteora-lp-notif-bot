@@ -1517,3 +1517,6 @@
 2026-08-25 21:13:47,241 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-25 21:47:16,544 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-25 21:47:20,170 [INFO] meteora_bot: Posisi baru terdeteksi: CanokbY3TPpNueGFEJWm9KxxNZrUxEq4vGDx1Brr2vB (Pistacio-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $291.1181
+2026-08-25 22:10:54,909 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-08-25 22:10:56,582 [INFO] meteora_bot: Posisi CanokbY3TPpNueGFEJWm9KxxNZrUxEq4vGDx1Brr2vB tidak terlihat lagi di wallet, ditandai closed.
+2026-08-25 22:10:56,813 [INFO] meteora_bot: Posisi baru terdeteksi: 1442kr78YZRg1NMPp5KAmhQkvJpMikd3q5EdB2ocB9R2 (Pistacio-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $292.5114
