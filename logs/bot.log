@@ -1532,3 +1532,4 @@
 2026-08-26 00:00:49,874 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
 2026-08-26 00:00:51,115 [INFO] meteora_bot: Posisi 12rMQX6WV74iySfVGCMo7Pr2YTK1S8y23viho1T4hG4u tidak terlihat lagi di wallet, ditandai closed.
 2026-08-26 00:00:51,418 [INFO] meteora_bot: Posisi baru terdeteksi: J8opaJVXpKevJyzF1Ehu5iLmJaemtxhe7RQcGRwfLdhL (Pistacio-SOL) wallet DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT, baseline nilai = $289.4009
+2026-08-26 01:10:51,346 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
