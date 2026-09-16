@@ -1714,3 +1714,4 @@
     at ClientBrowser.callServer (/home/runner/work/meteora-lp-notif-bot/meteora-lp-notif-bot/node_reader/node_modules/@solana/web3.js/lib/index.cjs.js:5081:18)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 2026-09-16 00:24:43,914 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
+2026-09-16 03:22:54,591 [INFO] meteora_bot: Bot monitoring dimulai (read-only). Wallet: DnBs5ZoAr8esBaxbB3KqPsikyhtwaW3p4563r6atycsT | Interval: 45s
